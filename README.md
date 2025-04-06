@@ -32,7 +32,7 @@ To run this project locally:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/ChaitanyaSai-Meka/your-repo-name.git
+git clone https://github.com/ChaitanyaSai-Meka/Portfolio.git
 
 # 2. Navigate into the project directory
 cd your-repo-name
