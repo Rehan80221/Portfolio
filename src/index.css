@@ -108,7 +108,7 @@
   bottom: -3px;
   border-radius: 50%;
   border-top: 1px solid rgb(210, 181, 181);
-  animation: spin 1.25s linear infinite;
+  animation: spin 4.5s linear infinite;
   z-index: 0;
 }
 
