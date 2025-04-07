@@ -49,7 +49,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="relative flex items-center justify-center w-full py-20 px-4 bg-white dark:bg-black">
+    <div className="relative flex flex-col items-center justify-center w-full py-20 px-4 bg-white dark:bg-black">
       {/* Dot Background Layer */}
       <div
         className={cn(
@@ -62,6 +62,16 @@ const Projects = () => {
 
       {/* Radial Mask Overlay */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
+
+      {/* Section Title */}
+      <div className="relative z-10 mb-12 text-center">
+        <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent">
+          Things I've been building 🚀
+        </h2>
+        <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-sm md:text-base max-w-xl mx-auto">
+          Exploring ideas, solving problems, and having fun with code — here’s what I’ve built so far.
+        </p>
+      </div>
 
       {/* Project Cards */}
       <div className="relative z-10 flex flex-wrap justify-center gap-8">

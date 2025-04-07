@@ -6,7 +6,7 @@ import { cn } from '../lib/utils';
 
 const Hero = () => {
   return (
-    <div className="relative flex h-[50rem] w-full items-center justify-center bg-white dark:bg-black overflow-hidden px-4 py-16">
+    <div className="relative flex min-h-[50rem] md:min-h-screen w-full items-center justify-center bg-white dark:bg-black overflow-hidden px-4 py-16">
       {/* Dot Background */}
       <div
         className={cn(

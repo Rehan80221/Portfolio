@@ -3,7 +3,7 @@ import { cn } from "../lib/utils";
 
 const About = () => {
   return (
-    <section className="about-container relative flex h-auto min-h-[50rem] w-full items-center justify-center bg-white dark:bg-black text-center py-20 px-4">
+    <section className="about-container relative flex min-h-[50rem] md:min-h-screen w-full items-center justify-center bg-white dark:bg-black text-center py-20 px-4">
       {/* Background pattern */}
       <div
         className={cn(
@@ -29,7 +29,7 @@ const About = () => {
 
         {/* Text Content */}
         <div className="text-left text-neutral-800 dark:text-neutral-300 max-w-2xl ml-8 md:ml-16">
-          <h1 className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
+          <h1 className="text-4xl sm:text-7xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent py-8">
             About Me.
           </h1>
           <p className="text-lg leading-relaxed mb-4">
