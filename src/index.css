@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
-/*  NAVBAR STYLING  */
+/* NAVBAR STYLING */
 #nav-overall {
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
   height: 4rem;
   color: whitesmoke;
+  background-color: black; 
 }
 
 #nav-div {
@@ -49,7 +50,7 @@
 
 /* Music Ends */
 
-/*  HERO SECTION  */
+/* HERO SECTION */
 .hero-section {
   min-height: 75vh;
   background-color: black;
@@ -75,6 +76,7 @@
 .hero-content h2 {
   font-size: 2.5rem;
   font-weight: normal;
+  color: whitesmoke; 
 }
 
 .typing-text {
@@ -94,8 +96,7 @@
   animation: shine 2.5s ease-in-out infinite;
 }
 
-
-/*  SOCIAL ICONS */
+/* SOCIAL ICONS */
 #social-icons {
   display: flex;
   justify-content: center;
@@ -135,16 +136,11 @@
 }
 
 @keyframes shine {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
+  0% { background-position: 200% 0; }
+  100% { background-position: 0 0; }
 }
 
-
-/* ABOUT SECTION PLACEHOLDER  */
+/* ABOUT SECTION PLACEHOLDER */
 .coming-soon {
   display: flex;
   justify-content: center;
@@ -167,10 +163,11 @@
 }
 /* Enter Style ends */
 
-/*GLOBAL STYLES */
+/* GLOBAL STYLES */
 html, body {
   background-color: black;
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  color: whitesmoke; 
 }

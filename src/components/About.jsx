@@ -3,23 +3,22 @@ import { cn } from "../lib/utils";
 
 const About = () => {
   return (
-    <section className="about-container relative flex min-h-[50rem] md:min-h-screen w-full items-center justify-center bg-white dark:bg-black text-center py-20 px-4">
+    <section className="about-container relative flex min-h-[50rem] md:min-h-screen w-full items-center justify-center bg-black text-center py-20 px-4">
       {/* Background pattern */}
       <div
         className={cn(
           "absolute inset-0",
           "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
         )}
       />
       {/* Faded radial gradient overlay */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
 
       {/* Content */}
       <div className="relative z-20 max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start gap-12">
         {/* Profile Image */}
-        <div className="w-64 h-64 rounded-full overflow-hidden flex-shrink-0 border-4 border-white dark:border-neutral-800">
+        <div className="w-64 h-64 rounded-full overflow-hidden flex-shrink-0 border-4 border-neutral-800">
           <img
             src="https://i.postimg.cc/Hs8K2v0y/my1stghibli.png"
             alt="Profile"
@@ -28,7 +27,7 @@ const About = () => {
         </div>
 
         {/* Text Content */}
-        <div className="text-left text-neutral-800 dark:text-neutral-300 max-w-2xl ml-8 md:ml-16">
+        <div className="text-left text-neutral-300 max-w-2xl ml-8 md:ml-16">
           <h1 className="text-4xl sm:text-7xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent py-8">
             About Me.
           </h1>

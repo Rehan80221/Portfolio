@@ -49,26 +49,25 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center w-full py-20 px-4 bg-white dark:bg-black">
+    <div className="relative flex flex-col items-center justify-center w-full py-20 px-4 bg-black">
       {/* Dot Background Layer */}
       <div
         className={cn(
           "absolute inset-0 z-0",
           "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
         )}
       />
 
       {/* Radial Mask Overlay */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
 
       {/* Section Title */}
       <div className="relative z-10 mb-12 text-center">
         <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent">
           Things I've been building 🚀
         </h2>
-        <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-sm md:text-base max-w-xl mx-auto">
+        <p className="mt-4 text-neutral-400 text-sm md:text-base max-w-xl mx-auto">
           Exploring ideas, solving problems, and having fun with code — here’s what I’ve built so far.
         </p>
       </div>
@@ -77,17 +76,17 @@ const Projects = () => {
       <div className="relative z-10 flex flex-wrap justify-center gap-8">
         {projects.map((project, index) => (
           <CardContainer key={index} className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+            <CardBody className="bg-black relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-bold text-white"
               >
                 {project.title}
               </CardItem>
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                className="text-neutral-300 text-sm max-w-sm mt-2"
               >
                 {project.description}
               </CardItem>
@@ -107,7 +106,7 @@ const Projects = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                  className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold"
                 >
                   Live →
                 </CardItem>

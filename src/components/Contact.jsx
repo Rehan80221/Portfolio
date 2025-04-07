@@ -40,26 +40,25 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-center px-4 py-20">
+    <section className="relative flex min-h-screen w-full flex-col items-center justify-center px-4 py-20 bg-black">
       {/* Background pattern */}
       <div
         className={cn(
           "absolute inset-0 z-0",
           "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
         )}
       />
 
       {/* Radial mask overlay */}
-      <div className="pointer-events-none absolute inset-0 z-10 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
+      <div className="pointer-events-none absolute inset-0 z-10 bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
 
       {/* Content */}
       <div className="relative z-20 max-w-xl w-full text-center">
         <h1 className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-5xl sm:text-7xl font-extrabold text-transparent">
           Connect with Me
         </h1>
-        <p className="mt-4 text-gray-400 text-lg">Let’s chat — drop a message!</p>
+        <p className="mt-4 text-neutral-400 text-lg">Let’s chat — drop a message!</p>
 
         <form ref={formRef} onSubmit={sendEmail} className="mt-10 space-y-4">
           <input
@@ -67,7 +66,7 @@ const Contact = () => {
             name="name"
             placeholder="Name"
             required
-            className="w-full rounded-md bg-black/40 px-4 py-2 text-white placeholder-gray-400 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-white/20"
+            className="w-full rounded-md bg-black/40 px-4 py-2 text-white placeholder-neutral-400 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-white/20"
           />
           <input
             type="email"
@@ -75,14 +74,14 @@ const Contact = () => {
             placeholder="Email (must be Gmail)"
             required
             pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
-            className="w-full rounded-md bg-black/40 px-4 py-2 text-white placeholder-gray-400 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-white/20"
+            className="w-full rounded-md bg-black/40 px-4 py-2 text-white placeholder-neutral-400 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-white/20"
           />
           <textarea
             name="message"
             placeholder="Message"
             required
             rows={4}
-            className="w-full rounded-md bg-black/40 px-4 py-2 text-white placeholder-gray-400 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-white/20"
+            className="w-full rounded-md bg-black/40 px-4 py-2 text-white placeholder-neutral-400 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-white/20"
           />
 
           <div className="mt-6 flex justify-center">
@@ -91,7 +90,7 @@ const Contact = () => {
               as="button"
               type="submit"
               disabled={sending}
-              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-6 py-2 font-semibold disabled:opacity-60"
+              className="bg-black text-white flex items-center space-x-2 px-6 py-2 font-semibold disabled:opacity-60"
             >
               <span>{sending ? "Sending..." : "Send Message"}</span>
             </HoverBorderGradient>
