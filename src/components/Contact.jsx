@@ -4,7 +4,7 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const formRef = useRef(null); // ✅ Removed TypeScript type
+  const formRef = useRef(null); 
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState(null);
 

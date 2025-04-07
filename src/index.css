@@ -1,18 +1,12 @@
 @import "tailwindcss";
 
-/* Navbar-styling-starts*/
+/*  NAVBAR STYLING  */
 #nav-overall {
-  position: relative;
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
   height: 4rem;
   color: whitesmoke;
-}
-
-#nav-overall:hover {
-  cursor: pointer;
-  touch-action: none;
 }
 
 #nav-div {
@@ -28,16 +22,15 @@
   padding: 5px 10px;
   color: white;
   font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .nav-a::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 10px; 
+  left: 10px;
   width: 0%;
   height: 2px;
   background-color: rgb(225, 220, 220);
@@ -45,17 +38,10 @@
 }
 
 .nav-a:hover::after {
-  width: calc(100% - 20px); 
+  width: calc(100% - 20px);
 }
 
-.nav-line {
-  background-color: red;
-  width: 100%;
-  height: 1px;
-}
-/* Navbar-styling-ends */
-
-/* Hero Section Styling Starts*/
+/*  HERO SECTION  */
 .hero-section {
   min-height: 75vh;
   background-color: black;
@@ -72,7 +58,7 @@
 .hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(to bottom, #d4d4d4, #737373); 
+  background: linear-gradient(to bottom, #d4d4d4, #737373);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -85,7 +71,7 @@
 
 .typing-text {
   font-weight: bold;
-  background: linear-gradient(to right, #1f1f1f, #4b4b4b, #1f1f1f); 
+  background: linear-gradient(to right, #1f1f1f, #4b4b4b, #1f1f1f);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -93,9 +79,8 @@
   animation: shine 2s linear infinite;
 }
 
-/* Social Icons Styling */
+/*  SOCIAL ICONS */
 #social-icons {
-  color: white;
   display: flex;
   justify-content: center;
   gap: 1.25rem;
@@ -105,7 +90,7 @@
 .icon-circle {
   font-size: 1.5rem;
   color: white;
-  background-color: black; 
+  background-color: black;
   border-radius: 50%;
   padding: 0.7rem;
   display: inline-flex;
@@ -122,14 +107,12 @@
   right: -3px;
   bottom: -3px;
   border-radius: 50%;
-  border-top: 1px solid rgb(210, 181, 181); 
-  border-left: 0 solid transparent;
-  border-right: 0 solid transparent;
-  border-bottom: 0 solid transparent;
+  border-top: 1px solid rgb(210, 181, 181);
   animation: spin 1.25s linear infinite;
   z-index: 0;
 }
 
+/* ANIMATIONS */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -140,22 +123,19 @@
   100% { background-position: 0 0; }
 }
 
-/* Hero Section Styling Ends */
-
-/* About Section Styling Starts */
+/* ABOUT SECTION PLACEHOLDER  */
 .coming-soon {
   display: flex;
   justify-content: center;
   font-size: 50px;
-  background: linear-gradient(to bottom, #d4d4d4, #737373); 
+  background: linear-gradient(to bottom, #d4d4d4, #737373);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-/* About Section Styling Ends */
 
-html,
-body {
+/*GLOBAL STYLES */
+html, body {
   background-color: black;
   min-height: 100vh;
   margin: 0;
