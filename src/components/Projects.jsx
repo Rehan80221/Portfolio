@@ -38,6 +38,13 @@ const projects = [
     link: "https://chaitanyasai-meka.github.io/Capstone_Project/",
     image: "https://i.postimg.cc/zDSHRxWJ/Capstone.png",
   },
+  {
+    title: "Coming Soon",
+    description:
+      "Still in the oven. Can’t wait to serve it hot!",
+    link: "",
+    image: "https://wallpapers.com/images/hd/black-page-wx75651aarimwdec.jpg",
+  },
 ];
 
 const Projects = () => {
