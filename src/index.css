@@ -141,15 +141,42 @@
 }
 
 /* ABOUT SECTION PLACEHOLDER */
-.coming-soon {
-  display: flex;
-  justify-content: center;
-  font-size: 50px;
-  background: linear-gradient(to bottom, #d4d4d4, #737373);
+.coming-soon-text {
+  font-size: 70px;
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    #888888,
+    #bcbcbc,
+    #ffffff,
+    #bcbcbc,
+    #888888
+  );
+  background-size: 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  animation: shimmer 8s ease-in-out infinite;
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
+
+@keyframes shimmer {
+  0% {
+    background-position: 300% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+/* Skills Styling Starts*/
+
+/* Skills Styling Ends*/
 
 /* Enter Style */
 .shine-animation {

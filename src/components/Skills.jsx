@@ -1,13 +1,16 @@
-import React from 'react'
+import React from 'react';
+
 
 const Skills = () => {
   return (
-    <>
-        <h1 className='coming-soon'>
-        Under Construction
-        </h1>
-    </>
-  )
-}
 
-export default Skills
+    <div className="coming-soon-text h-[100vh] flex justify-center items-center">
+    Under Construction 🏗️
+  </div>
+  
+
+
+  );
+};
+
+export default Skills;
