@@ -19,7 +19,6 @@ Welcome to my personal portfolio built with **React + Vite** — a fast, minimal
 - 🚀 Super-fast load with Vite
 - 📱 Responsive design
 - 💬 Working contact form (with Gmail-only validation)
-- 🧠 Scroll lock for immersive sections
 - ✨ Clean animations, polished UI
 
 ---
@@ -31,9 +30,6 @@ To run this project locally:
 ```bash
 # 1. Clone the repository
 git clone https://github.com/ChaitanyaSai-Meka/Portfolio.git
-
-# 2. Navigate into the project directory
-cd your-repo-name
 
 # 3. Install dependencies
 npm install
