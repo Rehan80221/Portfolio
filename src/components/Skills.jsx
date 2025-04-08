@@ -18,7 +18,7 @@ const Skills = () => {
 
       {/* Under Construction Text */}
       <div className=" coming-soon-text relative z-20 h-full flex justify-center items-center text-white text-2xl">
-        Under Construction 🏗️
+        Under Development 🚧
       </div>
     </div>
   );
