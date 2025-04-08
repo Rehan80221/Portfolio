@@ -8,42 +8,42 @@ const projects = [
     description:
       "A modern, animated clone of the official Apple website made with smooth scroll and transitions.",
     link: "https://apple-website-ecru-xi.vercel.app/",
-    image: "https://i.postimg.cc/LswLNh62/Apple.png",
+    image: "/Apple_website.png",
   },
   {
     title: "Movies Website",
     description:
       "Movie explorer website with sleek UI and live API integration.",
     link: "https://movies-web-project-seven.vercel.app/",
-    image: "https://i.postimg.cc/Yqd4djbZ/Movies.png",
+    image: "/Movies.png",
   },
   {
     title: "To-Do App with Flask",
     description:
       "Flask-powered backend with persistent task management frontend.",
     link: "https://todo-with-flask-a93d.onrender.com/",
-    image: "https://i.postimg.cc/tTDy9nZH/Screenshot-2025-04-07-at-2-07-33-AM.png",
+    image: "/Task_Master.png",
   },
   {
     title: "Temperature Converter (JS)",
     description:
       "Interactive converter for Celsius/Fahrenheit using plain JavaScript.",
     link: "https://chaitanyasai-meka.github.io/Temperature_Converter_JS/code/index.html",
-    image: "https://i.postimg.cc/GhL8PvJv/Temperature.png",
+    image: "/Temperature.png",
   },
   {
     title: "Capstone Project (HTML/CSS)",
     description:
       "Final capstone web project showcasing HTML and CSS skills.",
     link: "https://chaitanyasai-meka.github.io/Capstone_Project/",
-    image: "https://i.postimg.cc/zDSHRxWJ/Capstone.png",
+    image: "/Capstone.png",
   },
   {
     title: "Coming Soon",
     description:
       "Still in the oven. Can’t wait to serve it hot!",
     link: "",
-    image: "https://wallpapers.com/images/hd/black-page-wx75651aarimwdec.jpg",
+    image: "/black_page.jpg",
   },
 ];
 
