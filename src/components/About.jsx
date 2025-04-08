@@ -20,7 +20,7 @@ const About = () => {
         {/* Profile Image */}
         <div className="w-64 h-64 rounded-full overflow-hidden flex-shrink-0 border-4 border-neutral-800">
           <img
-            src="https://i.postimg.cc/Hs8K2v0y/my1stghibli.png"
+            src="/profile_pic.png"
             alt="Profile"
             className="w-full h-full object-cover"
           />
