@@ -66,7 +66,7 @@ const CardSpotlight = ({
                 [59, 130, 246],
                 [139, 92, 246],
               ]}
-              dotSize={3}
+              dotSize={3.5}
           />
         )}
       </motion.div>
