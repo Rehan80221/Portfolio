@@ -1,32 +1,44 @@
 import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaMusic } from "react-icons/fa"; 
+import { Link, useLocation } from 'react-router-dom';
+import { FaMusic } from "react-icons/fa";
 
 const Navbar = () => {
+  const location = useLocation();
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const toggleMusic = () => {
     if (!audioRef.current) return;
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
+    isPlaying ? audioRef.current.pause() : audioRef.current.play();
     setIsPlaying(!isPlaying);
   };
+
+  const links = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/skills', label: 'Skills' },
+    { path: '/projects', label: 'Projects' },
+    { path: '/contact', label: 'Contact' }
+  ];
 
   return (
     <nav id="nav-overall">
       <div id="nav-div">
-        <Link to="/" className="nav-a">Home</Link>
-        <Link to="/about" className="nav-a">About</Link>
-        <Link to="/skills" className="nav-a">Skills</Link>
-        <Link to="/projects" className="nav-a">Projects</Link>
-        <Link to="/contact" className="nav-a">Contact</Link>
+        {links.map(link => (
+          <Link
+            key={link.path}
+            to={link.path}
+            className={`nav-a
+              md:inline
+              ${location.pathname === link.path ? 'hidden md:inline' : ''}
+            `}
+          >
+            {link.label}
+          </Link>
+        ))}
       </div>
 
-      {/* Music Toggle Icon with Circle (hidden on mobile) */}
+      {/* Music toggle button */}
       <div 
         style={{ marginLeft: 'auto' }} 
         onClick={toggleMusic}
@@ -50,7 +62,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Hidden audio element */}
       <audio ref={audioRef} loop preload="auto">
         <source src="/suzume.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
