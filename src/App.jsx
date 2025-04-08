@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Loader from './components/Loader';
 import EnterScreen from './components/EnterScreen';
 import Footer from './components/Footer'; 
+import Skills from './components/Skills';
 
 function App() {
   const [started, setStarted] = useState(false);
@@ -34,6 +35,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/skills" element={<Skills />} />
             </Routes>
             <Footer />
           </div>
