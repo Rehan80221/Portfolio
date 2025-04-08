@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
@@ -14,11 +14,28 @@ import Skills from './components/Skills';
 function App() {
   const [started, setStarted] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
+  const [initialCheckDone, setInitialCheckDone] = useState(false);
+
+  useEffect(() => {
+    const isHome = window.location.pathname === '/';
+    const alreadyVisited = sessionStorage.getItem('alreadyVisited');
+
+    if (isHome && !alreadyVisited) {
+      setStarted(false); 
+    } else {
+      setStarted(true);  
+    }
+
+    setInitialCheckDone(true);
+  }, []);
 
   const handleStart = () => {
+    sessionStorage.setItem('alreadyVisited', 'true');
     setStarted(true);
     setShowLoader(true);
   };
+
+  if (!initialCheckDone) return null;
 
   return (
     <>
