@@ -63,7 +63,7 @@ const Skills = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center px-4 py-12 sm:py-20">
+    <div className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center px-4 py-12 sm:py-20 bg-black">
       
       {/* Background Grid */}
       <div
@@ -100,7 +100,7 @@ const Skills = () => {
         {Array.from({ length: 8 }, (_, index) => (
           <CardSpotlight
             key={index}
-            className="h-20 w-20 rounded-full flex items-center justify-center"
+            className="h-20 w-20 rounded-full flex items-center justify-center bg-black"
             color={`rgb(${colors[index][0]}, ${colors[index][1]}, ${colors[index][2]})`}
             onMouseEnter={() => handleMouseEnter(index)}
             onClick={() => handleMouseEnter(index)} // tap on mobile
