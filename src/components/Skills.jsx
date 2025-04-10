@@ -12,14 +12,15 @@ import { SiTypescript } from "react-icons/si";
 
 const Skills = () => {
   const colors = [
-    [138, 43, 226],
-    [147, 112, 219],
-    [186, 85, 211],
-    [153, 50, 204],
-    [218, 112, 214],
-    [221, 160, 221],
-    [216, 191, 216],
-    [128, 0, 128],
+    [138, 43, 226],  // Purple
+    [147, 112, 219], // Light Purple
+    [186, 85, 211],  // Medium Purple
+    [153, 50, 204],  // Dark Purple
+    [218, 112, 214], // Orchid
+    [221, 160, 221], // Plum
+    [216, 191, 216], // Thistle
+    [128, 0, 128],   // Dark Magenta
+    [56, 189, 248],  // Tailwind-like Sky Blue
   ];
 
   const icons = [
@@ -41,6 +42,12 @@ const Skills = () => {
       alt="Flask"
       className="w-10 h-10 p-1 object-contain"
     />,
+    <img
+      key="tailwind"
+      src="/tailwind.png"
+      alt="Tailwind"
+      className="w-10 h-10 p-1 object-contain"
+    />,
   ];
 
   const audioSources = [
@@ -52,6 +59,7 @@ const Skills = () => {
     "/a6-piano.mp3",
     "/c6-piano.mp3",
     "/d6-piano.mp3",
+    "/e6-piano.mp3", 
   ];
 
   const audioRefs = useRef([]);
@@ -97,7 +105,7 @@ const Skills = () => {
 
       {/* Icon Cards */}
       <div className="relative z-20 flex justify-center gap-4 flex-wrap max-w-5xl w-full">
-        {Array.from({ length: 8 }, (_, index) => (
+        {Array.from({ length: 9 }, (_, index) => ( 
           <CardSpotlight
             key={index}
             className="h-20 w-20 rounded-full flex items-center justify-center bg-black"
