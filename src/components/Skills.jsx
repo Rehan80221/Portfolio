@@ -21,6 +21,7 @@ const Skills = () => {
     [216, 191, 216], // Thistle
     [128, 0, 128],   // Dark Magenta
     [56, 189, 248],  // Tailwind-like Sky Blue
+    [70, 130, 180], //Postgresql
   ];
 
   const icons = [
@@ -48,6 +49,12 @@ const Skills = () => {
       alt="Tailwind"
       className="w-10 h-10 p-1 object-contain"
     />,
+    <img
+      key="postgresql"
+      src="/postgresql.png"
+      alt="Postgresql"
+      className="w-10 h-10 p-1 object-contain"
+    />,
   ];
 
   const audioSources = [
@@ -60,6 +67,7 @@ const Skills = () => {
     "/c6-piano.mp3",
     "/d6-piano.mp3",
     "/e6-piano.mp3", 
+    "/a6-piano.mp3",
   ];
 
   const audioRefs = useRef([]);
@@ -105,7 +113,7 @@ const Skills = () => {
 
       {/* Icon Cards */}
       <div className="relative z-20 flex justify-center gap-4 flex-wrap max-w-5xl w-full">
-        {Array.from({ length: 9 }, (_, index) => ( 
+        {Array.from({ length: 10 }, (_, index) => ( 
           <CardSpotlight
             key={index}
             className="h-20 w-20 rounded-full flex items-center justify-center bg-black"
