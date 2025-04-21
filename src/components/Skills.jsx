@@ -21,39 +21,46 @@ const Skills = () => {
     [216, 191, 216], // Thistle
     [128, 0, 128],   // Dark Magenta
     [56, 189, 248],  // Tailwind-like Sky Blue
-    [70, 130, 180], //Postgresql
+    [70, 130, 180],  // Postgresql
+    [57, 255, 20],   // Three.js - Neon Green
   ];
 
   const icons = [
-    <FaReact key="react" className="text-white text-2xl" />,
-    <FaHtml5 key="html" className="text-white text-2xl" />,
-    <FaCss3Alt key="css" className="text-white text-2xl" />,
-    <FaJs key="js" className="text-white text-2xl" />,
-    <SiTypescript key="ts" className="text-white text-2xl" />,
+    <FaReact key="react" className="text-white text-xl" />,
+    <FaHtml5 key="html" className="text-white text-xl" />,
+    <FaCss3Alt key="css" className="text-white text-xl" />,
+    <FaJs key="js" className="text-white text-xl" />,
+    <SiTypescript key="ts" className="text-white text-xl" />,
     <img
       key="gsap"
       src="/Gsap.png"
       alt="Gsap"
-      className="w-10 h-10 p-1 object-contain"
+      className="w-9 h-9 p-1 object-contain"
     />,
-    <FaPython key="python" className="text-white text-2xl" />,
+    <FaPython key="python" className="text-white text-xl" />,
     <img
       key="flask"
       src="/Flask.png"
       alt="Flask"
-      className="w-10 h-10 p-1 object-contain"
+      className="w-9 h-9 p-1 object-contain"
     />,
     <img
       key="tailwind"
       src="/tailwind.png"
       alt="Tailwind"
-      className="w-10 h-10 p-1 object-contain"
+      className="w-9 h-9 p-1 object-contain"
     />,
     <img
       key="postgresql"
       src="/postgresql.png"
       alt="Postgresql"
-      className="w-10 h-10 p-1 object-contain"
+      className="w-9 h-9 p-1 object-contain"
+    />,
+    <img
+      key="three-js-logo"
+      src="/three-js-logo.png"
+      alt="three.js"
+      className="w-9 h-9 p-1 object-contain"
     />,
   ];
 
@@ -68,6 +75,7 @@ const Skills = () => {
     "/d6-piano.mp3",
     "/e6-piano.mp3", 
     "/a6-piano.mp3",
+    "/c6-piano.mp3",
   ];
 
   const audioRefs = useRef([]);
@@ -112,8 +120,8 @@ const Skills = () => {
       </div>
 
       {/* Icon Cards */}
-      <div className="relative z-20 flex justify-center gap-4 flex-wrap max-w-5xl w-full">
-        {Array.from({ length: 10 }, (_, index) => ( 
+      <div className="relative z-20 flex justify-center gap-3 flex-wrap max-w-5xl w-full">
+        {Array.from({ length: 11 }, (_, index) => ( 
           <CardSpotlight
             key={index}
             className="h-20 w-20 rounded-full flex items-center justify-center bg-black"
