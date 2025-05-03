@@ -128,7 +128,7 @@ const Skills = () => {
       </div>
 
       {/* Icon Cards */}
-      <div className="relative z-20 flex gap-3 max-w-5xl w-full overflow-x-auto pb-4">
+      <div className="relative z-20 flex justify-center gap-3 flex-wrap max-w-5xl w-full">
         {Array.from({ length: 12 }, (_, index) => ( 
           <CardSpotlight
             key={index}
