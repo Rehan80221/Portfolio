@@ -23,6 +23,7 @@ const Skills = () => {
     [56, 189, 248],  // Tailwind-like Sky Blue
     [70, 130, 180],  // Postgresql
     [57, 255, 20],   // Three.js - Neon Green
+    [30, 41, 59],    //Next.js - Slate Blue
   ];
 
   const icons = [
@@ -62,6 +63,12 @@ const Skills = () => {
       alt="three.js"
       className="w-9 h-9 p-1 object-contain"
     />,
+    <img
+      key="next-js-logo"
+      src="/next.png"
+      alt="Next.js"
+      className="w-15 h-15 p-1 object-contain"
+    />
   ];
 
   const audioSources = [
@@ -76,6 +83,7 @@ const Skills = () => {
     "/e6-piano.mp3", 
     "/a6-piano.mp3",
     "/c6-piano.mp3",
+    "/g6-piano.mp3",
   ];
 
   const audioRefs = useRef([]);
@@ -120,11 +128,11 @@ const Skills = () => {
       </div>
 
       {/* Icon Cards */}
-      <div className="relative z-20 flex justify-center gap-3 flex-wrap max-w-5xl w-full">
-        {Array.from({ length: 11 }, (_, index) => ( 
+      <div className="relative z-20 flex gap-3 max-w-5xl w-full overflow-x-auto pb-4">
+        {Array.from({ length: 12 }, (_, index) => ( 
           <CardSpotlight
             key={index}
-            className="h-20 w-20 rounded-full flex items-center justify-center bg-black"
+            className="h-19 w-19 rounded-full flex items-center justify-center bg-black"
             color={`rgb(${colors[index][0]}, ${colors[index][1]}, ${colors[index][2]})`}
             onMouseEnter={() => handleMouseEnter(index)}
             onClick={() => handleMouseEnter(index)} // tap on mobile
