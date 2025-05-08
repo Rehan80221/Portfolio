@@ -39,6 +39,19 @@ const projects = [
     image: "/Capstone.png",
   },
   {
+    title: "NST.TINDER",
+    description:
+      "NST Tinder: Matchmaking for Newton School with swipe, chat, and futuristic profiles.",
+    link: "https://nst-tinder.vercel.app",
+    image: "/nst_tinder.png",
+  },
+  {
+    title: "Healthy Middle-Class India",
+    description: "Healthy Middle-Class India: Tackles obesity and lifestyle diseases with systemic solutions.",
+    link: "https://fste-chi.vercel.app",
+    image: "/fste.png"
+  },
+  {
     title: "Coming Soon",
     description:
       "Still in the oven. Can’t wait to serve it hot!",
