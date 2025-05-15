@@ -24,6 +24,7 @@ const Skills = () => {
     [70, 130, 180],  // Postgresql
     [57, 255, 20],   // Three.js - Neon Green
     [30, 41, 59],    //Next.js - Slate Blue
+    [255, 0, 128],   // Framer Motion - Vibrant Pink
   ];
 
   const icons = [
@@ -68,6 +69,12 @@ const Skills = () => {
       src="/next.png"
       alt="Next.js"
       className="w-15 h-15 p-1 object-contain"
+    />,
+    <img
+      key="motion_logo"
+      src="/motion_logo().png"
+      alt="motion"
+      className="w-15 h-15 p-1 object-contain"
     />
   ];
 
@@ -84,6 +91,7 @@ const Skills = () => {
     "/a6-piano.mp3",
     "/c6-piano.mp3",
     "/g6-piano.mp3",
+    "/f6-piano.mp3",
   ];
 
   const audioRefs = useRef([]);
@@ -129,19 +137,19 @@ const Skills = () => {
 
       {/* Icon Cards */}
       <div className="relative z-20 flex justify-center gap-3 flex-wrap max-w-5xl w-full">
-        {Array.from({ length: 12 }, (_, index) => ( 
-          <CardSpotlight
-            key={index}
-            className="h-19 w-19 rounded-full flex items-center justify-center bg-black"
-            color={`rgb(${colors[index][0]}, ${colors[index][1]}, ${colors[index][2]})`}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onClick={() => handleMouseEnter(index)} // tap on mobile
-          >
-            <div className="relative z-20">
-              {icons[index]}
-            </div>
-          </CardSpotlight>
-        ))}
+      {icons.map((icon, index) => (
+        <CardSpotlight
+          key={index}
+          className="h-18 w-18 rounded-full flex items-center justify-center bg-black"
+          color={`rgb(${colors[index][0]}, ${colors[index][1]}, ${colors[index][2]})`}
+          onMouseEnter={() => handleMouseEnter(index)}
+          onClick={() => handleMouseEnter(index)}
+        >
+          <div className="relative z-20">
+            {icon}
+          </div>
+        </CardSpotlight>
+      ))}
       </div>
     </div>
   );
