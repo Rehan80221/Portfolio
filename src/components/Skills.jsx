@@ -25,6 +25,7 @@ const Skills = () => {
     [57, 255, 20],   // Three.js - Neon Green
     [30, 41, 59],    //Next.js - Slate Blue
     [255, 0, 128],   // Framer Motion - Vibrant Pink
+    [0, 199, 255],   // Figma - Vivid Cyan/Blue
   ];
 
   const icons = [
@@ -75,6 +76,12 @@ const Skills = () => {
       src="/motion_logo().png"
       alt="motion"
       className="w-15 h-15 p-1 object-contain"
+    />,
+    <img
+      key="figma_logo"
+      src="/figma_logo.png"
+      alt="figma"
+      className="w-13 h-12 p-1 object-contain"
     />
   ];
 
@@ -92,6 +99,7 @@ const Skills = () => {
     "/c6-piano.mp3",
     "/g6-piano.mp3",
     "/f6-piano.mp3",
+    "/a6-piano.mp3",
   ];
 
   const audioRefs = useRef([]);
