@@ -26,6 +26,8 @@ const Skills = () => {
     [30, 41, 59],    //Next.js - Slate Blue
     [255, 0, 128],   // Framer Motion - Vibrant Pink
     [0, 199, 255],   // Figma - Vivid Cyan/Blue
+    [104, 160, 99],  // Node.js - Medium Green
+    [51, 51, 51]     // Express.js - Dark Gray
   ];
 
   const icons = [
@@ -82,7 +84,19 @@ const Skills = () => {
       src="/figma_logo.png"
       alt="figma"
       className="w-13 h-12 p-1 object-contain"
-    />
+    />,
+    <img
+      key="NodeJS_logo"
+      src="/NodeJS_Logo.png"
+      alt="NodeJS"
+      className="w-13 h-12 p-1 object-contain"
+    />,
+    <img
+      key="ExpressJS_logo"
+      src="/ExpressJS_Logo.png"
+      alt="ExpressJS"
+      className="w-16 h-11 p-1 object-contain"
+    />,
   ];
 
   const audioSources = [
@@ -100,6 +114,8 @@ const Skills = () => {
     "/g6-piano.mp3",
     "/f6-piano.mp3",
     "/a6-piano.mp3",
+    "/f6-piano.mp3",
+    "/g6-piano.mp3",
   ];
 
   const audioRefs = useRef([]);
