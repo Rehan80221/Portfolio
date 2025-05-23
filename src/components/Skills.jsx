@@ -29,6 +29,7 @@ const Skills = () => {
     [104, 160, 99],  // Node.js - Medium Green
     [51, 51, 51],     // Express.js - Dark Gray
     [255, 136, 0],    // Postman - Bright Orange
+    [242, 101, 34],   // Java - Logo Orange
   ];
 
   const icons = [
@@ -99,10 +100,16 @@ const Skills = () => {
       className="w-16 h-11 p-1 object-contain"
     />,
     <img
-      key="Postman_logo"
+      key="Postman_Logo"
       src="/Postman_Logo.png"
       alt="Postman"
       className="w-15 h-15 p-1 object-contain"
+    />,
+    <img
+      key="Java_Logo"
+      src="/Java_Logo.png"
+      alt="Java"
+      className="w-13 h-14 px-1 pb-1 object-contain"
     />,
   ];
 
@@ -124,6 +131,7 @@ const Skills = () => {
     "/f6-piano.mp3",
     "/g6-piano.mp3",
     "/b6-piano.mp3",
+    "/e6-piano.mp3",
   ];
 
   const audioRefs = useRef([]);
