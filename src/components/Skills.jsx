@@ -27,7 +27,8 @@ const Skills = () => {
     [255, 0, 128],   // Framer Motion - Vibrant Pink
     [0, 199, 255],   // Figma - Vivid Cyan/Blue
     [104, 160, 99],  // Node.js - Medium Green
-    [51, 51, 51]     // Express.js - Dark Gray
+    [51, 51, 51],     // Express.js - Dark Gray
+    [255, 136, 0],    // Postman - Bright Orange
   ];
 
   const icons = [
@@ -97,6 +98,12 @@ const Skills = () => {
       alt="ExpressJS"
       className="w-16 h-11 p-1 object-contain"
     />,
+    <img
+      key="Postman_logo"
+      src="/Postman_Logo.png"
+      alt="Postman"
+      className="w-15 h-15 p-1 object-contain"
+    />,
   ];
 
   const audioSources = [
@@ -116,6 +123,7 @@ const Skills = () => {
     "/a6-piano.mp3",
     "/f6-piano.mp3",
     "/g6-piano.mp3",
+    "/b6-piano.mp3",
   ];
 
   const audioRefs = useRef([]);
