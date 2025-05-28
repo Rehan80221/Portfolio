@@ -2,6 +2,10 @@ import React from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { cn } from "../lib/utils"; 
 import { FaGithub } from 'react-icons/fa';
+import Lenis from 'lenis';
+import { useEffect,useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const projects = [
   {
@@ -62,8 +66,51 @@ const projects = [
 ];
 
 const Projects = () => {
+
+  const scrollLineRef = useRef(null);
+
+  useEffect(() => {
+    // Lenis for smooth scrolling
+    const lenis = new Lenis({
+      duration: 3.2, // Scroll animation duration
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
+      smooth: true, // Enable smooth scrolling
+    });
+
+    // frame loop for Lenis boommm
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(scrollLineRef.current, {
+      width: "100%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: document.body,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    });
+
+    // Cleanup on component unmount
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
+    
     <div className="relative flex flex-col items-center justify-center w-full py-20 px-4 bg-black">
+      
+      <div
+        ref={scrollLineRef}
+        className="fixed top-0 left-0 h-[3px] bg-gradient-to-b from-neutral-200 to-neutral-500 w-0 z-50"
+      ></div>
+
       {/* Dot Background Layer */}
       <div
         className={cn(

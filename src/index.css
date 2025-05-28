@@ -225,3 +225,12 @@ html, body {
   padding: 0;
   color: whitesmoke; 
 }
+
+/* For hiding scroll bar*/
+html::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+}
