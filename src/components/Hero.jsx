@@ -25,10 +25,10 @@ const Hero = () => {
           Hi! Myself Chaitanya Sai Meka
         </h1>
 
-        <h2 className="text-md md:text-xl lg:text-3xl text-neutral-300 mt-4">
-          I am an expert in <span className="text-indigo-300 font-semibold typing-text">
+        <h2 className="text-md md:text-xl lg:text-2xl text-neutral-300 mt-4">
+          Dreams Coded into Reality with <span className="text-indigo-300 font-semibold typing-text">
             <Typewriter
-              words={['Frontend Development', 'Python', 'GSAP Animations', 'Flask', 'React']}
+              words={['Weaving Full-Stack Magic', 'Animating Digital Fantasies', 'Forging Unbreakable Backends', 'Sculpting Pixel-Perfect Frontends', 'Crafting Apps for Every Horizon', 'Breathing Life into 3D Worlds']}
               loop={0}
               cursor
               cursorStyle="_"

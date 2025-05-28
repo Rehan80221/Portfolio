@@ -30,6 +30,7 @@ const Skills = () => {
     [51, 51, 51],     // Express.js - Dark Gray
     [255, 136, 0],    // Postman - Bright Orange
     [242, 101, 34],   // Java - Logo Orange
+    [0, 201, 167],  //React Native - Bright Teal 
   ];
 
   const icons = [
@@ -111,6 +112,12 @@ const Skills = () => {
       alt="Java"
       className="w-13 h-14 px-1 pb-1 object-contain"
     />,
+    <img
+      key="React_Native_Logo"
+      src="/react_native_logo.png"
+      alt="React_Native"
+      className="w-11 h-12 px-1 pb-1 object-contain"
+    />,
   ];
 
   const audioSources = [
@@ -132,6 +139,7 @@ const Skills = () => {
     "/g6-piano.mp3",
     "/b6-piano.mp3",
     "/e6-piano.mp3",
+    "/d6-piano.mp3",
   ];
 
   const audioRefs = useRef([]);
