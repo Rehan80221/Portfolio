@@ -57,6 +57,12 @@ const projects = [
     image: "/fste.png"
   },
   {
+    title: "CYBERFICTION",
+    description: "Features smooth scrolling and logo animation using HTML, CSS, JS, Lenis, and GSAP. ",
+    link: "https://chaitanyasai-meka.github.io/CYBERFICTION/",
+    image: "/cyberfiction.png"
+  },
+  {
     title: "Coming Soon",
     description:
       "Still in the oven. Can’t wait to serve it hot!",
