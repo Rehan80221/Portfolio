@@ -1,5 +1,6 @@
 import React from 'react';
 import { cn } from "../lib/utils";
+import BlurImage from './utils/BlurImage';
 
 const About = () => {
   return (
@@ -19,11 +20,12 @@ const About = () => {
       <div className="relative z-20 max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start gap-12">
         {/* Profile Image */}
         <div className="w-64 h-64 rounded-full overflow-hidden flex-shrink-0 border-4 border-neutral-800">
-          <img
-            src="/profile_pic.png"
-            alt="Profile"
-            className="w-full h-full object-cover"
-          />
+        <BlurImage
+          src="/profile_pic.png"
+          blurhash="LAB._mEN5SkC-TNdofWX0hay}=WC"
+          alt="Profile"
+          className="w-full h-full"
+        />
         </div>
 
         {/* Text Content */}

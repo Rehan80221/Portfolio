@@ -6,6 +6,7 @@ import Lenis from 'lenis';
 import { useEffect,useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import ProjectImage from "./utils/ProjectImage";
 
 const projects = [
   {
@@ -14,6 +15,7 @@ const projects = [
       "A modern, animated clone of the official Apple website made with smooth scroll and transitions.",
     link: "https://apple-website-ecru-xi.vercel.app/",
     image: "/Apple_website.png",
+    blurhash:"L02$Hd9Z00~pneofp0WB00?a~V01"
   },
   {
     title: "Movies Website",
@@ -21,6 +23,7 @@ const projects = [
       "Movie explorer website with sleek UI and live API integration.",
     link: "https://movies-web-project-seven.vercel.app/",
     image: "/Movies.png",
+    blurhash:"LACZ35PqnOi_T0X9a|WA00+FIpkW"
   },
   {
     title: "To-Do App with Flask",
@@ -28,6 +31,7 @@ const projects = [
       "Flask-powered backend with persistent task management frontend.",
     link: "https://todo-with-flask-a93d.onrender.com/",
     image: "/Task_Master.png",
+    blurhash:"L13l5O9F4n%MD%t7t7Rj00t7_3IU"
   },
   {
     title: "Temperature Converter (JS)",
@@ -35,6 +39,7 @@ const projects = [
       "Interactive converter for Celsius/Fahrenheit using plain JavaScript.",
     link: "https://chaitanyasai-meka.github.io/Temperature_Converter_JS/code/index.html",
     image: "/Temperature.png",
+    blurhash:"L2QT1Z3C~Xtm00%EV[R.00erD}fP"
   },
   {
     title: "Capstone Project (HTML/CSS)",
@@ -42,6 +47,7 @@ const projects = [
       "Final capstone web project showcasing HTML and CSS skills.",
     link: "https://chaitanyasai-meka.github.io/Capstone_Project/",
     image: "/Capstone.png",
+    blurhash:"LhLz?TRk~qoe-=azM{ay?cs.MxbH"
   },
   {
     title: "NST.TINDER",
@@ -49,18 +55,21 @@ const projects = [
       "NST Tinder: Matchmaking for Newton School with swipe, chat, and futuristic profiles.",
     link: "https://nst-tinder.vercel.app",
     image: "/nst_tinder.png",
+    blurhash:"L6Sp@kpw%#t70{Y*aza|0_aKIBbH"
   },
   {
     title: "Healthy Middle-Class India",
     description: "Healthy Middle-Class India: Tackles obesity and lifestyle diseases with systemic solutions.",
     link: "https://fste-chi.vercel.app",
-    image: "/fste.png"
+    image: "/fste.png",
+    blurhash:"L1NAoU3}MZPp004N019c00UDI89H"
   },
   {
     title: "CYBERFICTION",
     description: "Features smooth scrolling and logo animation using HTML, CSS, JS, Lenis, and GSAP. ",
     link: "https://chaitanyasai-meka.github.io/CYBERFICTION/",
-    image: "/cyberfiction.png"
+    image: "/cyberfiction.png",
+     blurhash:"LbOzMcWB_NxuR*t7RjRjogWBM{fk"
   },
   {
     title: "Coming Soon",
@@ -68,6 +77,7 @@ const projects = [
       "Still in the oven. Can’t wait to serve it hot!",
     link: "",
     image: "/black_page.jpg",
+    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ"
   },
 ];
 
@@ -158,11 +168,9 @@ const Projects = () => {
                 {project.description}
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
-                <img
-                  src={project.image}
-                  height={1000}
-                  width={1000}
-                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                <ProjectImage
+                  image={project.image}
+                  blurhash={project.blurhash}
                   alt={project.title}
                 />
               </CardItem>
