@@ -10,6 +10,8 @@ Welcome to my personal portfolio built with **React + Vite** — a fast, minimal
 - ⚡ Vite — Lightning-fast development
 - 🎨 Tailwind CSS — Utility-first styling
 - 💌 EmailJS — Contact form integration
+- 🎞️ GSAP — Scroll-triggered animations and UI transitions
+- 🌀 Lenis — Smooth scrolling experience
 - 🧼 ESLint + Prettier — Code quality & consistency
 
 ---
@@ -19,7 +21,8 @@ Welcome to my personal portfolio built with **React + Vite** — a fast, minimal
 - 🚀 Super-fast load with Vite
 - 📱 Responsive design
 - 💬 Working contact form (with Gmail-only validation)
-- ✨ Clean animations, polished UI
+- ✨ Clean animations and smooth scroll effects using GSAP & Lenis
+- 🎯 Polished, user-friendly UI
 
 ---
 
