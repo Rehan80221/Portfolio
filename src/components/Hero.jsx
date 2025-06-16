@@ -18,7 +18,6 @@ const Hero = () => {
       
       {/* Radial Mask */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-
       {/* Content */}
       <div className="relative z-20 text-center">
         <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent">

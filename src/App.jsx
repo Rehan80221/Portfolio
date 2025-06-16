@@ -9,6 +9,7 @@ import Loader from './components/Loader';
 import EnterScreen from './components/EnterScreen';
 import Footer from './components/Footer'; 
 import Skills from './components/Skills';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   const [started, setStarted] = useState(false);
@@ -54,6 +55,7 @@ function App() {
               <Route path="/skills" element={<Skills />} />
             </Routes>
             <Footer />
+            <SpeedInsights />
           </div>
         </Router>
       )}
