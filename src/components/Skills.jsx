@@ -27,10 +27,11 @@ const Skills = () => {
     [255, 0, 128],   // Framer Motion - Vibrant Pink
     [0, 199, 255],   // Figma - Vivid Cyan/Blue
     [104, 160, 99],  // Node.js - Medium Green
-    [51, 51, 51],     // Express.js - Dark Gray
-    [255, 136, 0],    // Postman - Bright Orange
-    [242, 101, 34],   // Java - Logo Orange
-    [0, 201, 167],  //React Native - Bright Teal 
+    [51, 51, 51],    // Express.js - Dark Gray
+    [255, 136, 0],   // Postman - Bright Orange
+    [242, 101, 34],  // Java - Logo Orange
+    [0, 201, 167],   //React Native - Bright Teal 
+    [255, 166, 17] // Firebase - Dark Tangerine
   ];
 
   const icons = [
@@ -118,6 +119,12 @@ const Skills = () => {
       alt="React_Native"
       className="w-11 h-12 px-1 pb-1 object-contain"
     />,
+    <img
+      key="Firebase_Logo"
+      src="/firebase_logo.png"
+      alt="React_Native"
+      className="w-11 h-12 px-1 pb-1 object-contain"
+    />,
   ];
 
   const audioSources = [
@@ -140,6 +147,7 @@ const Skills = () => {
     "/b6-piano.mp3",
     "/e6-piano.mp3",
     "/d6-piano.mp3",
+    "/b6-piano.mp3",
   ];
 
   const audioRefs = useRef([]);
