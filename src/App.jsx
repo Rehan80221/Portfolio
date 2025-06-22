@@ -23,7 +23,7 @@ useEffect(() => {
   const alreadyVisited = sessionStorage.getItem('alreadyVisited');
 
   if (isBot) {
-    setStarted(true); // bots skip intro
+    setStarted(true);
   } else if (isHome && !alreadyVisited) {
     setStarted(false);
   } else {
