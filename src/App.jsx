@@ -17,17 +17,20 @@ function App() {
   const [showLoader, setShowLoader] = useState(false);
   const [initialCheckDone, setInitialCheckDone] = useState(false);
 
-  useEffect(() => {
-    const isHome = window.location.pathname === '/';
-    const alreadyVisited = sessionStorage.getItem('alreadyVisited');
-    if (isHome && !alreadyVisited) {
-      setStarted(false);
-    } else {
-      setStarted(true);
-    }
+useEffect(() => {
+  const isBot = /bot|crawl|spider|slurp|bing/i.test(navigator.userAgent);
+  const isHome = window.location.pathname === '/';
+  const alreadyVisited = sessionStorage.getItem('alreadyVisited');
 
-    setInitialCheckDone(true);
-  }, []);
+  if (isBot) {
+    setStarted(true); // bots skip intro
+  } else if (isHome && !alreadyVisited) {
+    setStarted(false);
+  } else {
+    setStarted(true);
+  }
+  setInitialCheckDone(true);
+}, []);
 
   const handleStart = () => {
     sessionStorage.setItem('alreadyVisited', 'true');
