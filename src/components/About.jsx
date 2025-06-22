@@ -1,10 +1,70 @@
 import React from 'react';
 import { cn } from "../lib/utils";
 import BlurImage from './utils/BlurImage';
+import { Helmet } from 'react-helmet-async'; // <--- Import Helmet here
 
 const About = () => {
   return (
     <section className="about-container relative flex min-h-[50rem] md:min-h-screen w-full items-center justify-center bg-black text-center py-20 px-4">
+      <Helmet>
+        {/* ====================================================================
+            PRIMARY META TAGS for About page
+            ==================================================================== */}
+        <title>About Chaitanya Sai Meka | Full Stack Developer & AI Enthusiast</title>
+        <meta name="description" content="Learn more about Chaitanya Sai Meka, a passionate full-stack developer with expertise in React, Node.js, AI/ML, UI/UX design, and entrepreneurial ventures. Discover my journey and goals." />
+        <link rel="canonical" href="https://chaitanya-sai-meka.vercel.app/about" /> {/* Canonical URL for About page */}
+
+        {/* ====================================================================
+            OPEN GRAPH META TAGS for About page (for social media sharing)
+            ==================================================================== */}
+        <meta property="og:title" content="About Chaitanya Sai Meka | Full Stack Developer" />
+        <meta property="og:description" content="Get to know Chaitanya Sai Meka's background, skills, projects, and entrepreneurial aspirations in full-stack development and AI/ML." />
+        <meta property="og:type" content="profile" /> {/* Or 'article' if it's more like a long-form bio */}
+        <meta property="og:url" content="https://chaitanya-sai-meka.vercel.app/about" />
+        {/* Use a relevant image for sharing, potentially your profile pic */}
+        <meta property="og:image" content="https://chaitanya-sai-meka.vercel.app/profile_pic.png" />
+        <meta property="og:site_name" content="Chaitanya Sai Meka's Portfolio" />
+
+        {/* ====================================================================
+            TWITTER CARD META TAGS for About page
+            ==================================================================== */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@yourtwitterhandle" /> {/* Replace with your Twitter handle */}
+        <meta name="twitter:title" content="About Chaitanya Sai Meka | Full Stack Developer" />
+        <meta name="twitter:description" content="Discover Chaitanya Sai Meka's passion for coding, full-stack development, AI, and building impactful digital solutions." />
+        <meta name="twitter:image" content="https://chaitanya-sai-meka.vercel.app/profile_pic.png" />
+
+        {/* ====================================================================
+            SCHEMA MARKUP for About page (Optional, as Person schema is on Hero.jsx, but can reinforce)
+            ==================================================================== */}
+        {/*
+          While the primary Person schema should be on your homepage (Hero.jsx),
+          you can optionally include a more specific schema here, like AboutPage or even another Person.
+          For a direct "About Me" page, ensuring the canonical links back to the main site helps Google.
+          If this page is truly just "about me", sticking with a strong canonical and descriptive meta tags is often sufficient.
+          However, you could use a more specific schema type like 'AboutPage' if relevant.
+        */}
+        {/* Example of AboutPage schema (optional, consider if your content fits this well)
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "AboutPage",
+              "name": "About Chaitanya Sai Meka",
+              "url": "https://chaitanya-sai-meka.vercel.app/about",
+              "description": "Learn more about Chaitanya Sai Meka, a passionate full-stack developer with expertise in React, Node.js, AI/ML, UI/UX design, and entrepreneurial ventures. Discover my journey and goals.",
+              "mainEntity": {
+                "@type": "Person",
+                "name": "Chaitanya Sai Meka",
+                "url": "https://chaitanya-sai-meka.vercel.app/", // Link to your main profile page
+                "image": "https://chaitanya-sai-meka.vercel.app/profile_pic.png"
+                // ... other Person properties as needed
+              }
+            }
+          `}
+        </script>
+        */}
+      </Helmet>
       {/* Background pattern */}
       <div
         className={cn(
