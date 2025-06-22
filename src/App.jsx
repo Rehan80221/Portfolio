@@ -10,6 +10,7 @@ import EnterScreen from './components/EnterScreen';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Helmet } from 'react-helmet-async';
 
 function App() {
   const [started, setStarted] = useState(false);
@@ -38,6 +39,56 @@ function App() {
 
   return (
     <>
+      {/* Global SEO Metadata */}
+      <Helmet>
+        <title>Chaitanya Sai Meka | Full Stack Developer & AI Enthusiast</title>
+        <meta name="description" content="Official portfolio of Chaitanya Sai Meka, a full stack developer skilled in React, Node.js, and passionate about AI/ML. Explore projects, skills, and experience." />
+        <link rel="canonical" href="https://chaitanya-sai-meka.vercel.app/" />
+
+        <meta property="og:title" content="Chaitanya Sai Meka | Full Stack Developer" />
+        <meta property="og:description" content="Official portfolio of Chaitanya Sai Meka, a full stack developer skilled in React, Node.js, and passionate about AI/ML." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://chaitanya-sai-meka.vercel.app/" />
+        <meta property="og:image" content="https://chaitanya-sai-meka.vercel.app/profile_pic.png" />
+        <meta property="og:site_name" content="Chaitanya Sai Meka's Portfolio" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@IAMCHAITANYASAI" />
+        <meta name="twitter:title" content="Chaitanya Sai Meka | Full Stack Developer" />
+        <meta name="twitter:description" content="Official portfolio of Chaitanya Sai Meka, a full stack developer skilled in React, Node.js, and passionate about AI/ML." />
+        <meta name="twitter:image" content="https://chaitanya-sai-meka.vercel.app/profile_pic.png" />
+
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Chaitanya Sai Meka",
+              "url": "https://chaitanya-sai-meka.vercel.app/",
+              "sameAs": [
+                "https://github.com/ChaitanyaSai-Meka",
+                "https://www.instagram.com/chaitanyasai_meka/",
+                "https://www.linkedin.com/in/chaitanya-sai-meka/",
+                "https://leetcode.com/u/chaitanyasai_meka/",
+                "https://codeforces.com/profile/Chaitanyasai_meka"
+              ],
+              "jobTitle": "Freelancer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Self-Employed"
+              },
+              "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Newton School of Technology"
+              },
+              "image": "https://chaitanya-sai-meka.vercel.app/profile_pic.png",
+              "description": "Chaitanya Sai Meka is a passionate full-stack developer specializing in React and modern web technologies, with expertise in AI and machine learning, based in Rajamahendravaram, Andhra Pradesh, India."
+            }
+          `}
+        </script>
+      </Helmet>
+
+      {/* UI Flow */}
       {!started ? (
         <EnterScreen onEnter={handleStart} />
       ) : showLoader ? (
