@@ -7,7 +7,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Loader from './components/Loader';
 import EnterScreen from './components/EnterScreen';
-import Footer from './components/Footer'; 
+import Footer from './components/Footer';
 import Skills from './components/Skills';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
@@ -19,11 +19,10 @@ function App() {
   useEffect(() => {
     const isHome = window.location.pathname === '/';
     const alreadyVisited = sessionStorage.getItem('alreadyVisited');
-
     if (isHome && !alreadyVisited) {
-      setStarted(false); 
+      setStarted(false);
     } else {
-      setStarted(true);  
+      setStarted(true);
     }
 
     setInitialCheckDone(true);
