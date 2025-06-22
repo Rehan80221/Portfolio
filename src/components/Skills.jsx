@@ -9,6 +9,7 @@ import {
   FaPython,
 } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
+import { LiquidCursor } from "./ui/liquidcursor";
 
 const Skills = () => {
   const colors = [
@@ -207,6 +208,7 @@ const Skills = () => {
         </CardSpotlight>
       ))}
       </div>
+      <LiquidCursor size={35} />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from "../lib/utils";
 import BlurImage from './utils/BlurImage';
 import { Helmet } from 'react-helmet-async';
+import { LiquidCursor } from './ui/liquidcursor';
 
 const About = () => {
   return (
@@ -64,6 +65,7 @@ const About = () => {
             My goal is to work on challenging projects, learn from experienced mentors, and make meaningful contributions to the tech community.
           </p>
         </div>
+        <LiquidCursor size={35} />
       </div>
     </section>
   );

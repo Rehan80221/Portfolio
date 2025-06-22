@@ -3,6 +3,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode, SiCodeforces } from "react-icons/si";
 import { cn } from '../lib/utils';
+import { LiquidCursor } from './ui/liquidcursor';
 
 const Hero = () => {
   return (
@@ -57,6 +58,7 @@ const Hero = () => {
             </a>
           </div>
         </div>
+         <LiquidCursor size={35} />
       </div>
     </>
   );
