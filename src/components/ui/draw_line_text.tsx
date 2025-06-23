@@ -1,6 +1,6 @@
 "use client";
 
-import { ComponentProps, useRef, useState } from "react";
+import { ComponentProps, useRef, useState, useEffect } from "react";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -8,7 +8,9 @@ import gsap from "gsap";
 type DrawTextProps = {
   afterFill?: boolean;
   color?: string;
-  fontSize?: number;
+  fontSize?:
+    | number
+    | { base?: number; sm?: number; md?: number; lg?: number; xl?: number };
   letterSpacing?: number;
   oneByOne?: boolean;
   strokeWidth?: number;
@@ -33,6 +35,47 @@ export const DrawLineText = ({
     height: number;
     width: number;
   }>({ height: 0, width: 0 });
+
+  const [currentFontSize, setCurrentFontSize] = useState(
+    typeof fontSize === "number" ? fontSize : 40
+  );
+
+  useEffect(() => {
+    if (typeof fontSize !== "object") {
+      setCurrentFontSize(fontSize);
+      return;
+    }
+
+    const responsiveFontSize = fontSize as {
+      base?: number;
+      sm?: number;
+      md?: number;
+      lg?: number;
+      xl?: number;
+    };
+
+    const handleResize = () => {
+      const width = window.innerWidth;
+      let newFontSize = responsiveFontSize.base || 40;
+
+      if (width >= 1280 && responsiveFontSize.xl) {
+        newFontSize = responsiveFontSize.xl;
+      } else if (width >= 1024 && responsiveFontSize.lg) {
+        newFontSize = responsiveFontSize.lg;
+      } else if (width >= 768 && responsiveFontSize.md) {
+        newFontSize = responsiveFontSize.md;
+      } else if (width >= 640 && responsiveFontSize.sm) {
+        newFontSize = responsiveFontSize.sm;
+      } else if (responsiveFontSize.base) {
+        newFontSize = responsiveFontSize.base;
+      }
+      setCurrentFontSize(newFontSize);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [fontSize]);
 
   useGSAP(
     () => {
@@ -80,7 +123,8 @@ export const DrawLineText = ({
         });
       }
     },
-    { scope: wrapperRef, dependencies: [text] }
+    // Rerun GSAP animation if text or currentFontSize changes
+    { scope: wrapperRef, dependencies: [text, currentFontSize] }
   );
 
   return (
@@ -100,11 +144,11 @@ export const DrawLineText = ({
             stroke: color,
             fill: color,
             fillOpacity: 0,
-            fontSize: fontSize,
+            fontSize: currentFontSize,
             strokeWidth: `${strokeWidth}px`,
             fontWeight: 600,
           }}
-          y={fontSize}
+          y={currentFontSize}
         >
           {char}
         </text>

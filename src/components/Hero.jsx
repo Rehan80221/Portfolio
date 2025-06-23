@@ -24,13 +24,19 @@ const Hero = () => {
         <div className="relative z-20 text-center">
           <div className="flex justify-center items-center gap-3 flex-wrap">
             <span
-              className="font-bold tracking-tight bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent"
-              style={{ fontSize: "71px", lineHeight: 1 }}
+              className="font-bold tracking-tight bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent
+                         text-5xl sm:text-6xl md:text-6xl lg:text-[71px]"
+              style={{ lineHeight: 1 }}
             >
               Hi! Myself
             </span>
             <DrawLineText
-              fontSize={70}
+              fontSize={{
+                base: 40,
+                sm: 50,
+                md: 60,
+                lg: 70,
+              }}
               strokeWidth={1.5}
               text="Chaitanya Sai Meka"
               color="url(#gradient)"
