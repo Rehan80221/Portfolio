@@ -224,11 +224,6 @@ html, body {
   margin: 0;
   padding: 0;
   color: whitesmoke; 
-  cursor: none;
-}
-
-a, button, input, textarea, select, label {
-  cursor: none !important;
 }
 
 /* For hiding scroll bar*/

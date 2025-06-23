@@ -3,7 +3,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode, SiCodeforces } from "react-icons/si";
 import { cn } from '../lib/utils';
-import { LiquidCursor } from './ui/liquidcursor';
+import { DrawLineText } from './ui/draw_line_text';
 
 const Hero = () => {
   return (
@@ -22,9 +22,30 @@ const Hero = () => {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
         {/* Content */}
         <div className="relative z-20 text-center">
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent">
-            Hi! Myself Chaitanya Sai Meka
-          </h1>
+<div className="flex justify-center items-center gap-3 flex-wrap">
+  <span
+    className="font-bold tracking-tight bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent"
+    style={{ fontSize: "71px", lineHeight: 1 }}
+  >
+    Hi! Myself
+  </span>
+  <DrawLineText
+    fontSize={70}
+    strokeWidth={1.5}
+    text="Chaitanya Sai Meka"
+    color="url(#gradient)"
+  />
+</div>
+
+<svg width="0" height="0">
+  <defs>
+    <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+      <stop stopColor="#e5e5e5" offset="0%" />
+      <stop stopColor="#737373" offset="100%" />
+    </linearGradient>
+  </defs>
+</svg>
+
 
           <h2 className="text-md md:text-xl lg:text-2xl text-neutral-300 mt-4">
             Dreams Coded into Reality with <span className="text-indigo-300 font-semibold typing-text">
@@ -58,7 +79,6 @@ const Hero = () => {
             </a>
           </div>
         </div>
-         <LiquidCursor size={35} />
       </div>
     </>
   );

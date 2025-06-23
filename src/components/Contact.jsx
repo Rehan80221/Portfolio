@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { cn } from "../lib/utils";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import emailjs from "emailjs-com";
-import { LiquidCursor } from "./ui/liquidcursor";
 
 const Contact = () => {
   const formRef = useRef(null); 
@@ -104,7 +103,6 @@ const Contact = () => {
           )}
         </form>
       </div>
-      <LiquidCursor size={35} />
     </section>
   );
 };

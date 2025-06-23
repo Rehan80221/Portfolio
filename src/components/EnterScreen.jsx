@@ -1,6 +1,5 @@
 import React from "react";
 import { SpiralAnimation } from "./ui/spiralanimation";
-import { LiquidCursor } from "./ui/liquidcursor";
 
 const EnterScreen = ({ onEnter }) => {
   const handleEnter = () => {
@@ -29,7 +28,6 @@ const EnterScreen = ({ onEnter }) => {
           Tap anywhere on the screen to continue
         </p>
       </div>
-      <LiquidCursor size={35} />
     </div>
   );
 };
