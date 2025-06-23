@@ -1,9 +1,9 @@
-import React from 'react';
-import { Typewriter } from 'react-simple-typewriter';
+import React from "react";
+import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode, SiCodeforces } from "react-icons/si";
-import { cn } from '../lib/utils';
-import { DrawLineText } from './ui/draw_line_text';
+import { cn } from "../lib/utils";
+import { DrawLineText } from "./ui/draw_line_text";
 
 const Hero = () => {
   return (
@@ -22,35 +22,42 @@ const Hero = () => {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
         {/* Content */}
         <div className="relative z-20 text-center">
-<div className="flex justify-center items-center gap-3 flex-wrap">
-  <span
-    className="font-bold tracking-tight bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent"
-    style={{ fontSize: "71px", lineHeight: 1 }}
-  >
-    Hi! Myself
-  </span>
-  <DrawLineText
-    fontSize={70}
-    strokeWidth={1.5}
-    text="Chaitanya Sai Meka"
-    color="url(#gradient)"
-  />
-</div>
+          <div className="flex justify-center items-center gap-3 flex-wrap">
+            <span
+              className="font-bold tracking-tight bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent"
+              style={{ fontSize: "71px", lineHeight: 1 }}
+            >
+              Hi! Myself
+            </span>
+            <DrawLineText
+              fontSize={70}
+              strokeWidth={1.5}
+              text="Chaitanya Sai Meka"
+              color="url(#gradient)"
+            />
+          </div>
 
-<svg width="0" height="0">
-  <defs>
-    <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-      <stop stopColor="#e5e5e5" offset="0%" />
-      <stop stopColor="#737373" offset="100%" />
-    </linearGradient>
-  </defs>
-</svg>
-
+          <svg width="0" height="0">
+            <defs>
+              <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+                <stop stopColor="#e5e5e5" offset="0%" />
+                <stop stopColor="#737373" offset="100%" />
+              </linearGradient>
+            </defs>
+          </svg>
 
           <h2 className="text-md md:text-xl lg:text-2xl text-neutral-300 mt-4">
-            Dreams Coded into Reality with <span className="text-indigo-300 font-semibold typing-text">
+            Dreams Coded into Reality with{" "}
+            <span className="text-indigo-300 font-semibold typing-text">
               <Typewriter
-                words={['Weaving Full-Stack Magic', 'Animating Digital Fantasies', 'Forging Unbreakable Backends', 'Sculpting Pixel-Perfect Frontends', 'Crafting Apps for Every Horizon', 'Breathing Life into 3D Worlds']}
+                words={[
+                  "Weaving Full-Stack Magic",
+                  "Animating Digital Fantasies",
+                  "Forging Unbreakable Backends",
+                  "Sculpting Pixel-Perfect Frontends",
+                  "Crafting Apps for Every Horizon",
+                  "Breathing Life into 3D Worlds",
+                ]}
                 loop={0}
                 cursor
                 cursorStyle="_"
@@ -62,19 +69,44 @@ const Hero = () => {
           </h2>
 
           <div className="flex justify-center gap-4 mt-6 text-2xl">
-            <a href="https://github.com/ChaitanyaSai-Meka" target="_blank" rel="noopener noreferrer" className="icon-circle hover:text-white transition">
+            <a
+              href="https://github.com/ChaitanyaSai-Meka"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-circle hover:text-white transition"
+            >
               <FaGithub />
             </a>
-            <a href="https://www.instagram.com/chaitanyasai_meka/" target="_blank" rel="noopener noreferrer" className="icon-circle hover:text-pink-600 transition">
+            <a
+              href="https://www.instagram.com/chaitanyasai_meka/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-circle hover:text-pink-600 transition"
+            >
               <FaInstagram />
             </a>
-            <a href="https://www.linkedin.com/in/chaitanya-sai-meka/" target="_blank" rel="noopener noreferrer" className="icon-circle hover:text-blue-600 transition">
+            <a
+              href="https://www.linkedin.com/in/chaitanya-sai-meka/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-circle hover:text-blue-600 transition"
+            >
               <FaLinkedin />
             </a>
-            <a href="https://leetcode.com/u/chaitanyasai_meka/" target="_blank" rel="noopener noreferrer" className="icon-circle hover:text-yellow-500 transition">
+            <a
+              href="https://leetcode.com/u/chaitanyasai_meka/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-circle hover:text-yellow-500 transition"
+            >
               <SiLeetcode />
             </a>
-            <a href="https://codeforces.com/profile/Chaitanyasai_meka" target="_blank" rel="noopener noreferrer" className="icon-circle hover:text-blue-400 transition">
+            <a
+              href="https://codeforces.com/profile/Chaitanyasai_meka"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-circle hover:text-blue-400 transition"
+            >
               <SiCodeforces />
             </a>
           </div>
