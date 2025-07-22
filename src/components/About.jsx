@@ -1,7 +1,6 @@
 import React from 'react';
 import { cn } from "../lib/utils";
 import BlurImage from './utils/BlurImage';
-import { Helmet } from 'react-helmet-async';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Lenis from 'lenis';
@@ -99,22 +98,6 @@ const About = () => {
 
   return (
     <section className="about-container relative flex min-h-[50rem] md:min-h-screen w-full items-center justify-center bg-black text-center py-20 px-4">
-      <Helmet>
-        <title>About Muntimadugu Rehan Haneef | AI Enthusiast</title>
-        <meta name="description" content="Learn more about Muntimadugu Rehan Haneef, a passionate AI and Data Science student with expertise in Python, Django, AI/ML, and cloud computing. Discover my journey and goals." />
-        <link rel="canonical" href="https://rehan-haneef-portfolio.vercel.app/about" />
-        <meta property="og:title" content="About Muntimadugu Rehan Haneef | AI & Data Science Student" />
-        <meta property="og:description" content="Get to know Muntimadugu Rehan Haneef's background, skills, projects, and aspirations in AI, Data Science, and full-stack development." />
-        <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://rehan-haneef-portfolio.vercel.app/about" />
-        <meta property="og:image" content="https://rehan-haneef-portfolio.vercel.app/RehanHaneef_profile.jpg" />
-        <meta property="og:site_name" content="Muntimadugu Rehan Haneef's Portfolio" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@rehan_haneef" />
-        <meta name="twitter:title" content="About Muntimadugu Rehan Haneef | AI & Data Science Student" />
-        <meta name="twitter:description" content="Discover Muntimadugu Rehan Haneef's passion for AI, Data Science, and building impactful digital solutions." />
-        <meta name="twitter:image" content="https://rehan-haneef-portfolio.vercel.app/RehanHaneef_profile.jpg" />
-      </Helmet>
       
       {/* Background pattern */}
       <div
