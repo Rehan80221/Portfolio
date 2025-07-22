@@ -95,7 +95,7 @@ const Hero = () => {
   </a>
 
   <a
-    href="\about" // ⬅️ Add corresponding id on your About section
+    href="/about" // ⬅️ Add corresponding id on your About section
     className="px-6 py-2 rounded-xl text-white text-sm sm:text-base font-medium backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 transition duration-300 shadow-md hover:shadow-white/20"
   >
     About Me
