@@ -1,32 +1,51 @@
 @import "tailwindcss";
 
-/* NAVBAR STYLING */
+/* NAVBAR STYLING - GLASSMORPHIC 3D */
 #nav-overall {
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 4rem;
   color: whitesmoke;
-  background-color: black; 
-}
 
-#nav-div {
-  position: absolute;
+  background: rgba(0, 0, 0, 0.2); /* Transparent */
+  backdrop-filter: blur(12px); /* Glassmorphism */
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 50;
+}
+
+/* Center Nav Buttons */
+#nav-div {
   display: flex;
   gap: 1.5rem;
 }
 
+/* Nav Links */
 .nav-a {
   position: relative;
-  padding: 5px 10px;
+  padding: 5px 12px;
   color: white;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
+  border-radius: 8px;
 }
 
+.nav-a:hover {
+  background: linear-gradient(to right, #9f7aea, #805ad5);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Optional underline animation */
 .nav-a::after {
   content: '';
   position: absolute;
@@ -34,7 +53,7 @@
   left: 10px;
   width: 0%;
   height: 2px;
-  background-color: rgb(225, 220, 220);
+  background-color: rgba(255, 255, 255, 0.6);
   transition: width 0.3s ease-in-out;
 }
 
@@ -42,12 +61,11 @@
   width: calc(100% - 20px);
 }
 
-/* Music */
+/* Music icon animation */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
 /* Music Ends */
 
 /* HERO SECTION */

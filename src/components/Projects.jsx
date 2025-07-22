@@ -10,74 +10,59 @@ import ProjectImage from "./utils/ProjectImage";
 
 const projects = [
   {
-    title: "Apple Website Clone",
+    title: "Serverless Data Analytics Pipeline",
     description:
-      "A modern, animated clone of the official Apple website made with smooth scroll and transitions.",
-    link: "https://apple-website-ecru-xi.vercel.app/",
-    image: "/Apple_website.png",
-    blurhash:"L02$Hd9Z00~pneofp0WB00?a~V01"
+      "Real-time data analytics pipeline using AWS Lambda, Kinesis, S3, and DynamoDB with React dashboard for live metrics visualization.",
+    link: "https://github.com/Rehan80221/Serverless_Data_Analytics_Pipeline-using-AWS.git",
+    image: "/serverlesspipe.png",
+    blurhash:"L02$Hd9Z00~pneofp0WB00?a~V01",
+    tech: ["AWS", "React", "Lambda", "Kinesis", "DynamoDB"]
   },
   {
-    title: "Movies Website",
+    title: "Online Examination Portal",
     description:
-      "Movie explorer website with sleek UI and live API integration.",
-    link: "https://movies-web-project-seven.vercel.app/",
-    image: "/Movies.png",
-    blurhash:"LACZ35PqnOi_T0X9a|WA00+FIpkW"
+      "Full-stack examination system with secure authentication, session handling, and role-based access control for admins, teachers, and students.",
+    link: "https://github.com/Rehan80221/online-exam-portal",
+    image: "/online.png",
+    blurhash:"LACZ35PqnOi_T0X9a|WA00+FIpkW",
+    tech: ["Python", "Django", "SQL", "Authentication"]
   },
   {
-    title: "To-Do App with Flask",
+    title: "Moodify - Emotion-Based Music Recommender",
     description:
-      "Flask-powered backend with persistent task management frontend.",
-    link: "https://todo-with-flask-a93d.onrender.com/",
-    image: "/Task_Master.png",
-    blurhash:"L13l5O9F4n%MD%t7t7Rj00t7_3IU"
+      "AI-driven music recommendation system using facial emotion recognition with OpenCV and ML models for personalized playlist curation.",
+    link: "https://github.com/Rehan80221/moodify-music-recommender",
+    image: "/moodify.png",
+    blurhash:"L13l5O9F4n%MD%t7t7Rj00t7_3IU",
+    tech: ["AI/ML", "OpenCV", "Python", "Computer Vision"]
   },
   {
-    title: "Temperature Converter (JS)",
+    title: "Mood Mart - E-commerce Platform",
     description:
-      "Interactive converter for Celsius/Fahrenheit using plain JavaScript.",
-    link: "https://chaitanyasai-meka.github.io/Temperature_Converter_JS/code/index.html",
-    image: "/Temperature.png",
-    blurhash:"L2QT1Z3C~Xtm00%EV[R.00erD}fP"
+      "Modern e-commerce platform with intuitive UI/UX, product management, and secure payment integration for seamless shopping experience.",
+    link: "https://github.com/Rehan80221/mood-mart",
+    image: "/moodmart.png",
+    blurhash:"L2QT1Z3C~Xtm00%EV[R.00erD}fP",
+    tech: ["React", "Node.js"]
   },
   {
-    title: "Capstone Project (HTML/CSS)",
+    title: "TicTacToe Game (Java GUI)",
     description:
-      "Final capstone web project showcasing HTML and CSS skills.",
-    link: "https://chaitanyasai-meka.github.io/Capstone_Project/",
-    image: "/Capstone.png",
-    blurhash:"LhLz?TRk~qoe-=azM{ay?cs.MxbH"
+      "Classic TicTacToe game implemented in Java with an interactive GUI interface, featuring clean design and smooth gameplay mechanics.",
+    link: "https://github.com/Rehan80221/tictactoe-java",
+    image: "/tictac.png",
+    blurhash:"LhLz?TRk~qoe-=azM{ay?cs.MxbH",
+    tech: ["Java", "Swing/AWT", "GUI", "Game Development"]
   },
-  {
-    title: "NST.TINDER",
-    description:
-      "NST Tinder: Matchmaking for Newton School with swipe, chat, and futuristic profiles.",
-    link: "https://nst-tinder.vercel.app",
-    image: "/nst_tinder.png",
-    blurhash:"L6Sp@kpw%#t70{Y*aza|0_aKIBbH"
-  },
-  {
-    title: "Healthy Middle-Class India",
-    description: "Healthy Middle-Class India: Tackles obesity and lifestyle diseases with systemic solutions.",
-    link: "https://fste-chi.vercel.app",
-    image: "/fste.png",
-    blurhash:"L1NAoU3}MZPp004N019c00UDI89H"
-  },
-  {
-    title: "CYBERFICTION",
-    description: "Features smooth scrolling and logo animation using HTML, CSS, JS, Lenis, and GSAP. ",
-    link: "https://chaitanyasai-meka.github.io/CYBERFICTION/",
-    image: "/cyberfiction.png",
-     blurhash:"LbOzMcWB_NxuR*t7RjRjogWBM{fk"
-  },
+  
   {
     title: "Coming Soon",
     description:
-      "Still in the oven. Can’t wait to serve it hot!",
+      "Next innovative project in development. Stay tuned for something amazing!",
     link: "",
     image: "/black_page.jpg",
-    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ"
+    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ",
+    tech: ["Coming Soon"]
   },
 ];
 
@@ -145,7 +130,7 @@ const Projects = () => {
           Things I've been building 🚀
         </h2>
         <p className="mt-4 text-neutral-400 text-sm md:text-base max-w-xl mx-auto">
-          Exploring ideas, solving problems, and having fun with code — here’s what I’ve built so far.
+          From AI-powered solutions to full-stack applications — here's my journey in code.
         </p>
       </div>
 
@@ -163,10 +148,23 @@ const Projects = () => {
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-neutral-300 text-sm max-w-sm mt-2"
+                className="text-neutral-300 text-sm max-w-sm mt-2 mb-3"
               >
                 {project.description}
               </CardItem>
+              
+              {/* Tech Stack Tags */}
+              <CardItem translateZ="40" className="flex flex-wrap gap-2 mb-4">
+                {project.tech.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="px-2 py-1 bg-neutral-800/50 text-neutral-400 text-xs rounded-md border border-neutral-700/30"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </CardItem>
+
               <CardItem translateZ="100" className="w-full mt-4">
                 <ProjectImage
                   image={project.image}
@@ -175,38 +173,47 @@ const Projects = () => {
                 />
               </CardItem>
               <div className="flex justify-end items-center mt-6">
-                <CardItem
-                  translateZ={20}
-                  as="a"
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold"
-                >
-                  Live →
-                </CardItem>
+                {project.link ? (
+                  <CardItem
+                    translateZ={20}
+                    as="a"
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold hover:bg-neutral-200 transition-colors"
+                  >
+                    View Project →
+                  </CardItem>
+                ) : (
+                  <CardItem
+                    translateZ={20}
+                    className="px-4 py-2 rounded-xl bg-neutral-700 text-neutral-400 text-xs font-bold cursor-not-allowed"
+                  >
+                    Coming Soon
+                  </CardItem>
+                )}
               </div>
             </CardBody>
           </CardContainer>
         ))}
       </div>
-      <div>
-      <a 
-      href="https://github.com/ChaitanyaSai-Meka"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-base font-semibold leading-6  text-white inline-block">
-        <span className="absolute inset-0 overflow-hidden rounded-full">
-          <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-        </span>
-        <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-2 px-7 ring-1 ring-white/10 ">
-          <span>
-            For More
+      <div className="mt-12">
+        <a 
+          href="https://github.com/Rehan80221"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-base font-semibold leading-6 text-white inline-block">
+          <span className="absolute inset-0 overflow-hidden rounded-full">
+            <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
           </span>
-          <FaGithub className="h-6 w-6 text-white" />
-        </div>
-        <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
-      </a>
+          <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-2 px-7 ring-1 ring-white/10 ">
+            <span>
+              View More on GitHub
+            </span>
+            <FaGithub className="h-6 w-6 text-white" />
+          </div>
+          <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
+        </a>
       </div>
     </div>
   );

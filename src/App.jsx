@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Loader from './components/Loader';
 import EnterScreen from './components/EnterScreen';
+import Certificates from "./components/Certificates";
 import Footer from './components/Footer';
 import Skills from './components/Skills';
 import { SpeedInsights } from '@vercel/speed-insights/react';
@@ -43,53 +44,62 @@ useEffect(() => {
   return (
     <>
       {/* Global SEO Metadata */}
-      <Helmet>
-        <title>Chaitanya Sai Meka | Full Stack Developer & AI Enthusiast</title>
-        <meta name="description" content="Official portfolio of Chaitanya Sai Meka, a full stack developer skilled in React, Node.js, and passionate about AI/ML. Explore projects, skills, and experience." />
-        <link rel="canonical" href="https://chaitanya-sai-meka.vercel.app/" />
+<Helmet>
+  <title>Muntimadugu Rehan Haneef | AI/ML & Cloud Enthusiast</title>
+  <meta
+    name="description"
+    content="Official portfolio of Muntimadugu Rehan Haneef, a passionate AI/ML and Cloud enthusiast skilled in Python, machine learning, and cloud technologies. Explore projects, skills, and achievements."
+  />
+  <link rel="canonical" href="https://RehanHaneef.netlify.app/" />
 
-        <meta property="og:title" content="Chaitanya Sai Meka | Full Stack Developer" />
-        <meta property="og:description" content="Official portfolio of Chaitanya Sai Meka, a full stack developer skilled in React, Node.js, and passionate about AI/ML." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://chaitanya-sai-meka.vercel.app/" />
-        <meta property="og:image" content="https://chaitanya-sai-meka.vercel.app/profile_pic.png" />
-        <meta property="og:site_name" content="Chaitanya Sai Meka's Portfolio" />
+  <meta property="og:title" content="Muntimadugu Rehan Haneef | AI/ML & Cloud Enthusiast" />
+  <meta
+    property="og:description"
+    content="Explore the portfolio of Rehan Haneef, a B.Tech student in AI & Data Science with experience in machine learning and cloud-based solutions."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://RehanHaneef.netlify.app/" />
+  <meta property="og:image" content="https://RehanHaneef.netlify.app/RehanHaneef_profile.jpg" />
+  <meta property="og:site_name" content="Rehan Haneef's Portfolio" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@IAMCHAITANYASAI" />
-        <meta name="twitter:title" content="Chaitanya Sai Meka | Full Stack Developer" />
-        <meta name="twitter:description" content="Official portfolio of Chaitanya Sai Meka, a full stack developer skilled in React, Node.js, and passionate about AI/ML." />
-        <meta name="twitter:image" content="https://chaitanya-sai-meka.vercel.app/profile_pic.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@RehanHaneef" />
+  <meta name="twitter:title" content="Muntimadugu Rehan Haneef | AI/ML & Cloud Enthusiast" />
+  <meta
+    name="twitter:description"
+    content="AI/ML & Cloud Enthusiast | B.Tech in AI & DS | Python Developer | Explore my journey and projects."
+  />
+  <meta name="twitter:image" content="https://RehanHaneef.netlify.app/RehanHaneef_profile.jpg" />
 
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Chaitanya Sai Meka",
-              "url": "https://chaitanya-sai-meka.vercel.app/",
-              "sameAs": [
-                "https://github.com/ChaitanyaSai-Meka",
-                "https://www.instagram.com/chaitanyasai_meka/",
-                "https://www.linkedin.com/in/chaitanya-sai-meka/",
-                "https://leetcode.com/u/chaitanyasai_meka/",
-                "https://codeforces.com/profile/Chaitanyasai_meka"
-              ],
-              "jobTitle": "Freelancer",
-              "worksFor": {
-                "@type": "Organization",
-                "name": "Self-Employed"
-              },
-              "alumniOf": {
-                "@type": "EducationalOrganization",
-                "name": "Newton School of Technology"
-              },
-              "image": "https://chaitanya-sai-meka.vercel.app/profile_pic.png",
-              "description": "Chaitanya Sai Meka is a passionate full-stack developer specializing in React and modern web technologies, with expertise in AI and machine learning, based in Rajamahendravaram, Andhra Pradesh, India."
-            }
-          `}
-        </script>
-      </Helmet>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Muntimadugu Rehan Haneef",
+        "url": "https://RehanHaneef.netlify.app/",
+        "sameAs": [
+          "https://github.com/rehanhaneef",
+          "https://www.linkedin.com/in/rehanhaneef/",
+          "https://leetcode.com/u/rehanhaneef/",
+          "https://www.instagram.com/rehanhaneef_/"
+        ],
+        "jobTitle": "AI/ML & Cloud Enthusiast",
+        "worksFor": {
+          "@type": "EducationalOrganization",
+          "name": "Koneru Lakshmaiah Education Foundation"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Koneru Lakshmaiah Education Foundation"
+        },
+        "image": "https://RehanHaneef.netlify.app/RehanHaneef_profile.jpg",
+        "description": "Muntimadugu Rehan Haneef is a B.Tech student in Artificial Intelligence & Data Science, passionate about AI/ML, cloud computing, and Python development. Skilled in building intelligent and scalable solutions."
+      }
+    `}
+  </script>
+</Helmet>
+
 
       {/* UI Flow */}
       {!started ? (
@@ -105,6 +115,7 @@ useEffect(() => {
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
+          <Route path="/certificates" element={<Certificates />} />
               <Route path="/skills" element={<Skills />} />
             </Routes>
             <Footer />

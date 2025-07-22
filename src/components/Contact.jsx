@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { cn } from "../lib/utils";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import emailjs from "emailjs-com";
+import SplineScene from "./SplineScene";
 
 const Contact = () => {
   const formRef = useRef(null); 
@@ -23,10 +24,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_7yymo38",       
-        "template_12345",       
+        "service_59vfl7j",
+        "template_bjeeuch",
         formRef.current,
-        "Nrt6aQrzDZimIGqI8"     
+        "68n-Mrz5nnPBdskD0"
       )
       .then(() => {
         setStatus("✅ Message sent successfully!");
@@ -50,6 +51,11 @@ const Contact = () => {
         )}
       />
 
+      {/* Spline 3D Overlay (z-10) */}
+      <div className="absolute inset-0 z-10 w-full h-full">
+        <SplineScene />
+      </div>
+
       {/* Radial mask overlay */}
       <div className="pointer-events-none absolute inset-0 z-10 bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
 
@@ -58,7 +64,11 @@ const Contact = () => {
         <h1 className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-5xl sm:text-7xl font-extrabold text-transparent">
           Connect with Me
         </h1>
-        <p className="mt-4 text-neutral-400 text-lg">Let’s chat — drop a message!</p>
+       
+       <p className="mt-4 text-white text-lg font-semibold bg-black/40 px-4 py-2 rounded-md inline-block backdrop-blur-sm">
+  Let’s chat — drop a message!
+</p>
+
 
         <form ref={formRef} onSubmit={sendEmail} className="mt-10 space-y-4">
           <input
@@ -66,7 +76,7 @@ const Contact = () => {
             name="name"
             placeholder="Name"
             required
-            className="w-full rounded-md bg-black/40 px-4 py-2 text-white placeholder-neutral-400 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-white/20"
+            className="w-full rounded-xl bg-white/10 px-4 py-3 text-white placeholder-white/70 border border-white/20 backdrop-blur-md shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-300/30"
           />
           <input
             type="email"
@@ -74,26 +84,36 @@ const Contact = () => {
             placeholder="Email (must be Gmail)"
             required
             pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
-            className="w-full rounded-md bg-black/40 px-4 py-2 text-white placeholder-neutral-400 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-white/20"
+            className="w-full rounded-xl bg-white/10 px-4 py-3 text-white placeholder-white/70 border border-white/20 backdrop-blur-md shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-300/30"
           />
           <textarea
             name="message"
             placeholder="Message"
             required
             rows={4}
-            className="w-full rounded-md bg-black/40 px-4 py-2 text-white placeholder-neutral-400 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-white/20"
+            className="w-full rounded-xl bg-white/10 px-4 py-3 text-white placeholder-white/70 border border-white/20 backdrop-blur-md shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-300/30"
           />
 
           <div className="mt-6 flex justify-center">
-            <HoverBorderGradient
-              containerClassName="rounded-full"
-              as="button"
-              type="submit"
-              disabled={sending}
-              className="bg-black text-white flex items-center space-x-2 px-6 py-2 font-semibold disabled:opacity-60"
-            >
-              <span>{sending ? "Sending..." : "Send Message"}</span>
-            </HoverBorderGradient>
+         <HoverBorderGradient
+  containerClassName="rounded-full"
+  as="button"
+  type="submit"
+  disabled={sending}
+  className={cn(
+    "backdrop-blur-md",
+    "bg-white/10",
+    "text-white",
+    "flex items-center space-x-2 px-6 py-2",
+    "font-semibold transition-all duration-300 ease-in-out",
+    "hover:bg-white/20 hover:shadow-lg hover:shadow-indigo-400/20",
+    "border border-white/20",
+    "disabled:opacity-60"
+  )}
+>
+  <span>{sending ? "Sending..." : "Send Message"}</span>
+</HoverBorderGradient>
+
           </div>
 
           {status && (
