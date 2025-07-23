@@ -5,7 +5,12 @@ import { SiLeetcode, SiCodeforces } from "react-icons/si";
 import { cn } from "../lib/utils";
 import { DrawLineText } from "./ui/draw_line_text";
 import SplineScene from "./SplineScene";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
+=======
+import { Link } from "react-router-dom"; 
+ // adjust path if needed
+>>>>>>> 129a035cea0a5df4093ed052394efa54167b5e8a
 
 const Hero = () => {
   return (
@@ -88,6 +93,7 @@ const Hero = () => {
             </span>
           </h2>
 
+<<<<<<< HEAD
           {/* Buttons */}
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <a
@@ -104,6 +110,15 @@ const Hero = () => {
               About Me
             </Link>
           </div>
+=======
+  <Link
+    to="/about" // ⬅️ Add corresponding id on your About section
+    className="px-6 py-2 rounded-xl text-white text-sm sm:text-base font-medium backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 transition duration-300 shadow-md hover:shadow-white/20"
+  >
+    About Me
+  </Link>
+</div>
+>>>>>>> 129a035cea0a5df4093ed052394efa54167b5e8a
 
           {/* Social Icons */}
           <div className="flex justify-center gap-6 mt-6 text-2xl text-white flex-wrap">
