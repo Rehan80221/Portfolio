@@ -5,52 +5,55 @@ import { SiLeetcode, SiCodeforces } from "react-icons/si";
 import { cn } from "../lib/utils";
 import { DrawLineText } from "./ui/draw_line_text";
 import SplineScene from "./SplineScene";
- // adjust path if needed
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <>
-          <div className="relative flex min-h-[50rem] md:min-h-screen w-full items-center justify-center overflow-hidden px-4 py-16 bg-black">
+      <div className="relative flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-4 py-16 bg-black">
 
-      {/* Dot Background (z-0) */}
-      <div
-        className={cn(
-          "absolute inset-0 z-0",
-          "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
-        )}
-      />
+        {/* Dot Background */}
+        <div
+          className={cn(
+            "absolute inset-0 z-0",
+            "[background-size:20px_20px]",
+            "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+          )}
+        />
 
-{/* Spline 3D Overlay (z-10) */}
-<div className="absolute inset-0 z-10 w-full h-full">
-  <SplineScene />
-</div>
+        {/* Spline 3D */}
+        <div className="absolute inset-0 z-10 w-full h-full">
+          <SplineScene />
+        </div>
 
-      {/* Radial Mask over Spline (z-20) */}
-      <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center bg-black bg-opacity-40 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+        {/* Radial Overlay */}
+        <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center bg-black bg-opacity-40 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
 
-      {/* Text Content (z-30) */}
-      <div className="relative z-30 text-center">
-        <div className="flex justify-center items-center gap-3 flex-wrap">
-          <span
-            className="font-bold tracking-tight bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent
-                       text-5xl sm:text-6xl md:text-6xl lg:text-[71px]"
-            style={{ lineHeight: 1 }}
-          >
+        {/* Content */}
+        <div className="relative z-30 w-full max-w-4xl text-center">
+          <div className="flex justify-center items-center gap-3 flex-wrap">
+            <span
+              className="font-bold tracking-tight bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent text-3xl sm:text-5xl md:text-6xl lg:text-[71px]"
+              style={{ lineHeight: 1 }}
+            >
               Hi! Myself
             </span>
-            <DrawLineText
-              fontSize={{
-                base: 40,
-                sm: 50,
-                md: 60,
-                lg: 70,
-              }}
-              strokeWidth={1.5}
-              text="Muntimadugu Rehan Haneef"
-              color="url(#gradient)"
-              
-            />
+            
+            {/* Mobile-first responsive name */}
+            <div className="w-full sm:w-auto">
+              <DrawLineText
+                fontSize={{
+                  base: 24, // Reduced from 30 for mobile
+                  sm: 32,   // Reduced from 40
+                  md: 50,   // Reduced from 60
+                  lg: 70,
+                }}
+                strokeWidth={1.5}
+                text="Muntimadugu Rehan Haneef"
+                color="url(#gradient)"
+                className="break-words" // Allow text wrapping if needed
+              />
+            </div>
           </div>
 
           <svg width="0" height="0">
@@ -62,7 +65,7 @@ const Hero = () => {
             </defs>
           </svg>
 
-          <h2 className="text-md md:text-xl lg:text-2xl text-neutral-300 mt-4">
+          <h2 className="text-sm sm:text-md md:text-xl lg:text-2xl text-neutral-300 mt-4 px-2">
             Dreams Coded into Reality with{" "}
             <span className="text-indigo-300 font-semibold typing-text">
               <Typewriter
@@ -70,11 +73,10 @@ const Hero = () => {
                   "AI-Powered Innovation",
                   "Emotion-Driven Applications",
                   "Full-Stack Web Mastery",
-        "3D-Enhanced User Interfaces",
-        "Serverless Cloud Architectures",
-        "Smart & Responsive Design",
-        
-        "Real-Time Data Visualization",
+                  "3D-Enhanced User Interfaces",
+                  "Serverless Cloud Architectures",
+                  "Smart & Responsive Design",
+                  "Real-Time Data Visualization",
                 ]}
                 loop={0}
                 cursor
@@ -85,25 +87,26 @@ const Hero = () => {
               />
             </span>
           </h2>
-          <div className="mt-6 flex justify-center gap-4 flex-wrap z-30">
-  <a
-    href="/Rehan_resume.pdf" // 🔁 change to your actual file path
-    download
-    className="px-6 py-2 rounded-xl text-white text-sm sm:text-base font-medium backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 transition duration-300 shadow-md hover:shadow-white/20"
-  >
-    Download CV
-  </a>
 
-  <a
-    href="\about" // ⬅️ Add corresponding id on your About section
-    className="px-6 py-2 rounded-xl text-white text-sm sm:text-base font-medium backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 transition duration-300 shadow-md hover:shadow-white/20"
-  >
-    About Me
-  </a>
-</div>
+          {/* Buttons */}
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
+            <a
+              href="/Rehan_resume.pdf"
+              download
+              className="px-6 py-2 rounded-xl text-white text-sm sm:text-base font-medium backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 transition duration-300 shadow-md hover:shadow-white/20"
+            >
+              Download CV
+            </a>
+            <Link
+              to="/about"
+              className="px-6 py-2 rounded-xl text-white text-sm sm:text-base font-medium backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 transition duration-300 shadow-md hover:shadow-white/20"
+            >
+              About Me
+            </Link>
+          </div>
 
-
-          <div className="flex justify-center gap-4 mt-6 text-2xl">
+          {/* Social Icons */}
+          <div className="flex justify-center gap-6 mt-6 text-2xl text-white flex-wrap">
             <a
               href="https://github.com/Rehan80221"
               target="_blank"
@@ -128,8 +131,6 @@ const Hero = () => {
             >
               <FaLinkedin />
             </a>
-        
-
           </div>
         </div>
       </div>
