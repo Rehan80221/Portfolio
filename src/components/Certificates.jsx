@@ -20,7 +20,7 @@ const certificates = [
   },
   {
     title: "IBM Python Certificate",
-    platform: "IBM / Coursera",
+    platform: "IBM / Etrain Education",
     image: "/ibm.png",
     link: "https://courses.etrain.skillsnetwork.site/certificates/0c7b50956f3e4dc4a255ace37477c8ff",
   },
@@ -44,7 +44,7 @@ const certificates = [
   },
   {
     title: "RPA Essential Professional 2023 Certified",
-    platform: "RPA Certification Body",
+    platform: "RPA Certification ",
     image: "/rpa.png", // Add this image to public/
     link: "#", // Replace with your actual certificate link
   },
