@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://RehanHaneef.netlify.app/sitemap.xml
+Sitemap: https://rehanhaneef-portfolio.netlify.app/sitemap.xml
