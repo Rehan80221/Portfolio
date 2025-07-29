@@ -6,50 +6,32 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Loader from './components/Loader';
-import EnterScreen from './components/EnterScreen';
-import Certificates from "./components/Certificates";
+import Certificates from './components/Certificates';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
-
 function App() {
-  const [started, setStarted] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
   const [initialCheckDone, setInitialCheckDone] = useState(false);
 
-useEffect(() => {
-  const isBot = /bot|crawl|spider|slurp|bing/i.test(navigator.userAgent);
-  const isHome = window.location.pathname === '/';
-  const alreadyVisited = sessionStorage.getItem('alreadyVisited');
+  useEffect(() => {
+    const isBot = /bot|crawl|spider|slurp|bing/i.test(navigator.userAgent);
+    const alreadyVisited = sessionStorage.getItem('alreadyVisited');
 
-  if (isBot) {
-    setStarted(true);
-  } else if (isHome && !alreadyVisited) {
-    setStarted(false);
-  } else {
-    setStarted(true);
-  }
-  setInitialCheckDone(true);
-}, []);
+    if (!isBot && !alreadyVisited) {
+      setShowLoader(true);
+      sessionStorage.setItem('alreadyVisited', 'true');
+    }
 
-  const handleStart = () => {
-    sessionStorage.setItem('alreadyVisited', 'true');
-    setStarted(true);
-    setShowLoader(true);
-  };
+    setInitialCheckDone(true);
+  }, []);
 
   if (!initialCheckDone) return null;
 
   return (
     <>
-
-
-
-      {/* UI Flow */}
-      {!started ? (
-        <EnterScreen onEnter={handleStart} />
-      ) : showLoader ? (
+      {showLoader ? (
         <Loader onComplete={() => setShowLoader(false)} />
       ) : (
         <Router>
@@ -60,7 +42,7 @@ useEffect(() => {
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
-          <Route path="/certificates" element={<Certificates />} />
+              <Route path="/certificates" element={<Certificates />} />
               <Route path="/skills" element={<Skills />} />
             </Routes>
             <Footer />

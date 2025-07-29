@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@react-spring/web": "^10.0.1",
     "@react-three/fiber": "^9.1.2",
     "@splinetool/runtime": "^1.10.33",
     "@tabler/icons-react": "^3.31.0",

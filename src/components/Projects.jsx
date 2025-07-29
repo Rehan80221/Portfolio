@@ -3,7 +3,7 @@ import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { cn } from "../lib/utils"; 
 import { FaGithub } from 'react-icons/fa';
 import Lenis from 'lenis';
-import { useEffect,useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ProjectImage from "./utils/ProjectImage";
@@ -54,7 +54,6 @@ const projects = [
     blurhash:"LhLz?TRk~qoe-=azM{ay?cs.MxbH",
     tech: ["Java", "Swing/AWT", "GUI", "Game Development"]
   },
-  
   {
     title: "Coming Soon",
     description:
@@ -67,7 +66,6 @@ const projects = [
 ];
 
 const Projects = () => {
-
   const scrollLineRef = useRef(null);
 
   useEffect(() => {
@@ -78,7 +76,10 @@ const Projects = () => {
       smooth: true, // Enable smooth scrolling
     });
 
-    // frame loop for Lenis boommm
+    // Scroll to top when component mounts
+    lenis.scrollTo(0, { immediate:0 });
+
+    // frame loop for Lenis
     const raf = (time) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -103,8 +104,12 @@ const Projects = () => {
     };
   }, []);
 
+  // Fallback scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    
     <div className="relative flex flex-col items-center justify-center w-full py-20 px-4 bg-black">
       
       <div
@@ -197,6 +202,7 @@ const Projects = () => {
           </CardContainer>
         ))}
       </div>
+      
       <div className="mt-12">
         <a 
           href="https://github.com/Rehan80221"

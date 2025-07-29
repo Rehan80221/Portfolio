@@ -9,13 +9,13 @@ const certificates = [
   {
     title: "Salesforce Certified AI Associate",
     platform: "Salesforce / Credly",
-    image: "/salesforce.png", // Add this image to public/
+    image: "/salesforce.png",
     link: "https://www.salesforce.com/trailblazer/hk5cp63j9zpj5h688o",
   },
   {
     title: "Google Cloud Engineering",
     platform: "Google Cloud / LinkedIn",
-    image: "/gcloud.png", // Add this image to public/
+    image: "/gcloud.png",
     link: "https://www.linkedin.com/posts/rehan-haneef-442555263_salesforce-ai-associate-certificate-activity-7254316417125101571-Hour",
   },
   {
@@ -33,20 +33,20 @@ const certificates = [
   {
     title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
     platform: "Oracle / Oracle University",
-    image: "/oracleai.png", // Add this image to public/
-    link: "#", // Replace with your actual certificate link
+    image: "/oracleai.png",
+    link: "#",
   },
   {
     title: "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
     platform: "Oracle / Oracle University",
-    image: "/oracle.png", // Add this image to public/
-    link: "#", // Replace with your actual certificate link
+    image: "/oracle.png",
+    link: "#",
   },
   {
     title: "RPA Essential Professional 2023 Certified",
     platform: "RPA Certification ",
-    image: "/rpa.png", // Add this image to public/
-    link: "#", // Replace with your actual certificate link
+    image: "/rpa.png",
+    link: "#",
   },
 ];
 
@@ -55,6 +55,10 @@ const Certificates = () => {
 
   useEffect(() => {
     const lenis = new Lenis({ duration: 2, smooth: true });
+    
+    // Scroll to top when component mounts
+    lenis.scrollTo(0, { immediate: 0 });
+    
     const raf = (time) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -74,6 +78,11 @@ const Certificates = () => {
     });
 
     return () => lenis.destroy();
+  }, []);
+
+  // Fallback scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -97,51 +106,49 @@ const Certificates = () => {
         {certificates.map((cert, index) => (
           <CardContainer key={index} className="inter-var">
             <CardBody
-  className="relative group/card w-auto sm:w-[24rem] h-auto rounded-xl p-6
-  bg-white/5 backdrop-blur-lg border border-white/10
-  overflow-hidden transition-all duration-500
-  before:absolute before:inset-0 before:z-0 before:rounded-xl
-  before:bg-gradient-to-br before:from-purple-500/10 before:via-pink-500/10 before:to-yellow-400/10
-  before:opacity-0 group-hover/card:before:opacity-100 group-hover/card:before:blur-xl group-hover/card:before:scale-110
-  hover:shadow-[0_0_30px_#a855f740]"
->
+              className="relative group/card w-auto sm:w-[24rem] h-auto rounded-xl p-6
+              bg-white/5 backdrop-blur-lg border border-white/10
+              overflow-hidden transition-all duration-500
+              before:absolute before:inset-0 before:z-0 before:rounded-xl
+              before:bg-gradient-to-br before:from-purple-500/10 before:via-pink-500/10 before:to-yellow-400/10
+              before:opacity-0 group-hover/card:before:opacity-100 group-hover/card:before:blur-xl group-hover/card:before:scale-110
+              hover:shadow-[0_0_30px_#a855f740]"
+            >
+              <CardItem
+                translateZ="50"
+                className="relative z-10 text-xl font-bold text-white group-hover/card:text-indigo-300 transition"
+              >
+                {cert.title}
+              </CardItem>
 
-       <CardItem
-  translateZ="50"
-  className="relative z-10 text-xl font-bold text-white group-hover/card:text-indigo-300 transition"
->
-  {cert.title}
-</CardItem>
+              <CardItem
+                as="p"
+                translateZ="40"
+                className="relative z-10 text-neutral-300 text-sm mt-2"
+              >
+                {cert.platform}
+              </CardItem>
 
-<CardItem
-  as="p"
-  translateZ="40"
-  className="relative z-10 text-neutral-300 text-sm mt-2"
->
-  {cert.platform}
-</CardItem>
+              <CardItem translateZ="100" className="relative z-10 w-full mt-4">
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="w-full h-48 object-cover rounded-lg border border-white/10 group-hover/card:scale-[1.02] transition duration-300"
+                />
+              </CardItem>
 
-<CardItem translateZ="100" className="relative z-10 w-full mt-4">
-  <img
-    src={cert.image}
-    alt={cert.title}
-    className="w-full h-48 object-cover rounded-lg border border-white/10 group-hover/card:scale-[1.02] transition duration-300"
-  />
-</CardItem>
-
-<div className="flex justify-end mt-6">
-  <CardItem
-    translateZ={20}
-    as="a"
-    href={cert.link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="relative z-10 px-4 py-2 rounded-xl bg-white/20 backdrop-blur-md text-white text-xs font-semibold border border-white/10 hover:bg-white/30 transition"
-  >
-    View →
-  </CardItem>
-</div>
-
+              <div className="flex justify-end mt-6">
+                <CardItem
+                  translateZ={20}
+                  as="a"
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-10 px-4 py-2 rounded-xl bg-white/20 backdrop-blur-md text-white text-xs font-semibold border border-white/10 hover:bg-white/30 transition"
+                >
+                  View →
+                </CardItem>
+              </div>
             </CardBody>
           </CardContainer>
         ))}

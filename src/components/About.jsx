@@ -4,9 +4,10 @@ import BlurImage from './utils/BlurImage';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Lenis from 'lenis';
-import { useEffect,useRef } from "react";
+import { useEffect, useRef } from "react";
+
 const About = () => {
-   const scrollLineRef = useRef(null);
+  const scrollLineRef = useRef(null);
 
   useEffect(() => {
     // Lenis for smooth scrolling
@@ -16,7 +17,10 @@ const About = () => {
       smooth: true, // Enable smooth scrolling
     });
 
-    // frame loop for Lenis boommm
+    // Scroll to top when component mounts
+    lenis.scrollTo(0, { immediate: 0 });
+
+    // frame loop for Lenis
     const raf = (time) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -39,6 +43,12 @@ const About = () => {
     return () => {
       lenis.destroy();
     };
+  }, []);
+
+  // Alternative approach - Add this useEffect if the above doesn't work
+  useEffect(() => {
+    // Fallback scroll to top
+    window.scrollTo(0, 0);
   }, []);
 
   // Custom SVG Icons
@@ -125,7 +135,7 @@ const About = () => {
             />
           </div>
 
-                   {/* Text Content */}
+          {/* Text Content */}
           <div className="text-left text-neutral-300 max-w-2xl ml-8 md:ml-16">
             <h1 className="text-4xl sm:text-7xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent py-8">
               About Me.
