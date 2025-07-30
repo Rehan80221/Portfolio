@@ -288,7 +288,7 @@ const Hero = () => {
                 <FaInstagram />
               </motion.a>
               <motion.a
-                href="https://www.linkedin.com/in/rehan-haneef"
+                href="https://www.linkedin.com/in/muntimadugu-rehan-haneef-442555263/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, y: -3, rotate: 5 }}
@@ -886,7 +886,7 @@ const Hero = () => {
             >
               {[
                 { icon: FaGithub, href: "https://github.com/Rehan80221", color: "text-gray-400 hover:text-white" },
-                { icon: FaLinkedin, href: "https://www.linkedin.com/in/rehan-haneef", color: "text-blue-400 hover:text-blue-300" },
+                { icon: FaLinkedin, href: "https://www.linkedin.com/in/muntimadugu-rehan-haneef-442555263/", color: "text-blue-400 hover:text-blue-300" },
                 { icon: FaInstagram, href: "https://www.instagram.com/rehan_haneef212/", color: "text-pink-400 hover:text-pink-300" },
               ].map((social, index) => (
                 <motion.a
