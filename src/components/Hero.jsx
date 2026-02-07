@@ -230,7 +230,7 @@ const Hero = () => {
            {/* Glass Buttons */}
 <div className="mt-8 flex flex-wrap justify-center gap-4">
   <motion.a
-    href="/Rehan_resume.pdf"
+    href="/Rehan_Haneef_Resume.pdf"
     download
     whileHover={{ scale: 1.05, y: -2 }}
     whileTap={{ scale: 0.95 }}
