@@ -792,7 +792,7 @@ const Hero = () => {
             {[
               { icon: FaEnvelope, title: "Email", content: "2200080221aids@gmail.com", color: "indigo" },
               { icon: FaPhone, title: "Phone", content: "+91 8121463751", color: "green" },
-              { icon: FaLinkedin, title: "LinkedIn", content: "Connect professionally", color: "blue", href: "https://www.linkedin.com/in/rehan-haneef" }
+              { icon: FaLinkedin, title: "LinkedIn", content: "Connect professionally", color: "blue", href: "https://www.linkedin.com/in/muntimadugu-rehan-haneef-442555263/" }
             ].map((item, index) => (
               <motion.div
                 key={index}
